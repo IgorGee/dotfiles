@@ -28,8 +28,6 @@ let g:airline#extensions#tabline#enabled = 1
 
 let g:syntastic_python_checkers = ['pylint']
 
-au BufNewFile *.cpp 0r ~/.vim/cpp.skel | let IndentStyle = "cpp"
-
 set laststatus=2
 set noswapfile
 
@@ -51,3 +49,18 @@ set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 set t_Co=256
 
 colorscheme jellybeans
+
+let mapleader = "\<Space>"
+nnoremap <Leader>o :CtrlP<CR>   " open new file
+nnoremap <Leader>w :w<CR>       " write file
+
+" Copy & paste to system clipboard with <Space>p and <Space>y
+vmap <Leader>y "+y
+vmap <Leader>d "+d
+nmap <Leader>p "+p
+nmap <Leader>P "+P
+vmap <Leader>p "+p
+vmap <Leader>P "+P
+
+" Enter visual line mode
+nmap <Leader><Leader> V
