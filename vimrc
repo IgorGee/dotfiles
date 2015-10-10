@@ -30,22 +30,22 @@ let g:airline#extensions#tabline#enabled = 1
 
 let g:syntastic_python_checkers = ['pylint']
 
-set laststatus=2
-set noswapfile
+set laststatus=2            " status bar on bottom
+set noswapfile              " don't create any .swp files
 
-set tabstop=4
-set shiftwidth=4
-set expandtab
-set autoindent
-set smartindent
-set smarttab
+set tabstop=4               " number of visual spaces per TAB
+set shiftwidth=4            " indentation takes up 4 spaces
+set expandtab               " tabs are spaces
+set autoindent              " copy indentation of previous line
+set smartindent             " adds levels of indentation in some situations
+set smarttab                " <TAB> is interpreted based on shiftwidth
 
-set relativenumber
-set number
-set textwidth=79
-set colorcolumn=+1
+set relativenumber          " show line numbers relative to current line
+set number                  " show line number of current line
+set textwidth=79            " set text width to 79 characters
+set colorcolumn=+1          " set a black column 1 space past the textwidth
 
-set invlist
+set invlist                 " show non-printing characters
 set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 
 set t_Co=256
@@ -64,5 +64,4 @@ nmap <Leader>P "+P
 vmap <Leader>p "+p
 vmap <Leader>P "+P
 
-" Enter visual line mode
-nmap <Leader><Leader> V
+nmap <Leader><Leader> V     " Enter visual line mode
