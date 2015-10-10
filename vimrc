@@ -56,12 +56,4 @@ let mapleader = "\<Space>"
 nnoremap <Leader>o :CtrlP<CR>   " open new file
 nnoremap <Leader>w :w<CR>       " write file
 
-" Copy & paste to system clipboard with <Space>p and <Space>y
-vmap <Leader>y "+y
-vmap <Leader>d "+d
-nmap <Leader>p "+p
-nmap <Leader>P "+P
-vmap <Leader>p "+p
-vmap <Leader>P "+P
-
 nmap <Leader><Leader> V     " Enter visual line mode
