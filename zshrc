@@ -127,6 +127,6 @@ setopt HIST_FIND_NO_DUPS
 #}}}
 
 
-alias ez='vim ~/.zshrc'
-alias ev='vim ~/.vimrc'
+alias ez='vim ~/dotfiles/zshrc'
+alias ev='vim ~/dotfiles/vimrc'
 alias tmux='tmux -2'
