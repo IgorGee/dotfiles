@@ -25,10 +25,12 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 let g:airline_theme='murmur'
-let g:airline#extension#tmuxline#enabled = 1
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extension#tmuxline#enabled = 1    " Apply colorscheme in tmux
+let g:airline#extensions#tabline#enabled = 1    " Show tabs of files on top
 
-let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_python_checkers = ['pylint']    " Set python linter to pylint
+
+let g:delimitmate_expand_cr = 1     " Add \n and <TAB> when entering {}
 
 set laststatus=2            " status bar on bottom
 set noswapfile              " don't create any .swp files
