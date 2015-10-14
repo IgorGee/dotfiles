@@ -55,12 +55,13 @@ nnoremap <Leader>n :NERDTreeToggle<CR>
 filetype indent on                              " load filetype-specific indent files
 set t_Co=256                                    " enable 256 colors in vim
 set laststatus=2                                " status bar on bottom
-colorscheme jellybeans                          " set colorscheme from vim-colorschemes
+colorscheme jellybeans       					" set colorscheme from vim-colorschemes
 set noswapfile                                  " don't create any .swp files
 set lazyredraw                                  " redraw only when we need to, faster macros
 
 set tabstop=4                                   " number of visual spaces per TAB
 set shiftwidth=4                                " indentation takes up 4 spaces
+set expandtab
 set autoindent                                  " copy indentation of previous line
 set smartindent                                 " adds levels of indentation in some situations
 set smarttab                                    " <TAB> is interpreted based on shiftwidth
@@ -69,7 +70,6 @@ set relativenumber                              " show line numbers relative to 
 set number                                      " show line number of current line
 set textwidth=100                               " set text width to 99 characters
 call matchadd('ColorColumn', '\%101v', 100)     " only show a colorcolumn when I pass the textwidth
-set cursorline                                  " highlight current line
 set fillchars+=vert:\                           " removes the | character in vertical splits
 highlight VertSplit gui=reverse guifg=Green     " set vertical split border colors green
 
@@ -89,4 +89,4 @@ set foldmethod=indent                           " fold based on indent level
 
 " show non-printing characters
 set invlist
-set listchars=tab:░▒,eol:¬,trail:⋅,extends:❯,precedes:❮
+set listchars=trail:⋅,extends:❯,precedes:❮
