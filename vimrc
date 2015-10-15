@@ -90,3 +90,12 @@ set foldmethod=indent                           " fold based on indent level
 " show non-printing characters
 set invlist
 set listchars=trail:⋅,extends:❯,precedes:❮
+
+function! <SID>StripTrailingWhiteSpaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+endfun
+
+autocmd BufWritePre * :call <SID>StripTrailingWhiteSpaces()
