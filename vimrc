@@ -89,7 +89,7 @@ set foldmethod=indent                           " fold based on indent level
 
 " show non-printing characters
 set invlist
-set listchars=trail:⋅,extends:❯,precedes:❮
+set listchars=tab:▸\ ,trail:⋅,extends:❯,precedes:❮
 
 function! <SID>StripTrailingWhiteSpaces()
     let l = line(".")
