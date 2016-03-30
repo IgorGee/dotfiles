@@ -38,6 +38,9 @@ let g:airline#extension#tmuxline#enabled = 1    " Apply colorscheme in tmux
 let g:airline#extensions#tabline#enabled = 1    " Show tabs of files on top
 
 let g:syntastic_python_checkers = ['pylint']    " Set python linter to pylint
+let g:syntastic_python_pylint_args = "--const-rgx='[a-z_][a-z0-9_]{2,30}$'"
+let g:syntastic_cpp_compiler = 'g++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 
 let g:delimitMate_expand_cr = 1                 " Add \n and <TAB> when entering {}
 let g:delimitMate_expand_space = 1
