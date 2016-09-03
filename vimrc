@@ -16,8 +16,6 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'marijnh/tern_for_vim'                   " Provide Tern-based JavaScript editing support
-Plugin 'xolox/vim-colorscheme-switcher'
-Plugin 'xolox/vim-misc'
 Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
@@ -50,10 +48,6 @@ let g:delimitMate_expand_space = 1
 nnoremap <Leader>u :GundoToggle<CR>
 
 nnoremap <Leader>t :TagbarToggle<CR>
-
-nnoremap <Leader>o :PrevColorScheme<CR>
-nnoremap <Leader>p :NextColorScheme<CR>
-nnoremap <Leader>i :RandomColorScheme<CR>
 
 nnoremap <Leader>n :NERDTreeToggle<CR>
 
