@@ -100,3 +100,5 @@ function! <SID>StripTrailingWhiteSpaces()
 endfun
 
 autocmd BufWritePre * :call <SID>StripTrailingWhiteSpaces()
+
+autocmd FileType javascript.jsx UltiSnipsAddFiletypes html
