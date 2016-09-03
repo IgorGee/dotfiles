@@ -19,6 +19,7 @@ Plugin 'marijnh/tern_for_vim'                   " Provide Tern-based JavaScript 
 Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
+Plugin 'sheerun/vim-polyglot'
 Plugin 'SirVer/Ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'justinj/vim-react-snippets'
