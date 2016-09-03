@@ -132,3 +132,5 @@ alias ev='vim ~/dotfiles/vimrc'
 alias eg='vim ~/.oh-my-zsh/plugins/git/git.plugin.zsh'
 alias et='vim ~/dotfiles/tmux.conf'
 alias tmux='tmux -2'
+
+alias snippets='cd ~/.vim/bundle/vim-snippets/snippets'
