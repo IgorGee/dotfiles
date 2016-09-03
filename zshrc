@@ -134,3 +134,7 @@ alias et='vim ~/dotfiles/tmux.conf'
 alias tmux='tmux -2'
 
 alias snippets='cd ~/.vim/bundle/vim-snippets/snippets'
+
+function gcl() {
+    git clone "https://github.com/$1/$2"
+}
