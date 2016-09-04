@@ -126,12 +126,18 @@ setopt HIST_FIND_NO_DUPS
 
 #}}}
 
+NPM_CONFIG_PREFIX=~/.npm-global
 
 alias ez='vim ~/dotfiles/zshrc'
 alias ev='vim ~/dotfiles/vimrc'
 alias eg='vim ~/.oh-my-zsh/plugins/git/git.plugin.zsh'
 alias et='vim ~/dotfiles/tmux.conf'
 alias tmux='tmux -2'
+
+alias npmi='npm install'
+alias npms='npm install -S'
+alias npmd='npm install -D'
+alias npmg='npm install -g'
 
 alias snippets='cd ~/.vim/bundle/vim-snippets/snippets'
 
