@@ -22,7 +22,6 @@ Plugin 'scrooloose/syntastic'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'SirVer/Ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'justinj/vim-react-snippets'
 Plugin 'sjl/gundo.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
@@ -102,3 +101,4 @@ endfun
 autocmd BufWritePre * :call <SID>StripTrailingWhiteSpaces()
 
 autocmd FileType javascript.jsx UltiSnipsAddFiletypes html
+autocmd FileType javascript.jsx UltiSnipsAddFiletypes react
