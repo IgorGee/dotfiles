@@ -143,6 +143,7 @@ alias npmi='npm install'
 alias npms='npm install -S'
 alias npmd='npm install -D'
 alias npmg='npm install -g'
+alias npmiweb='npmd webpack webpack-dev-server react react-dom react-router react-router-redux redux babel-loader babel-preset-es2015 babel-preset-react style-loader css-loader sass-loader node-sass'
 
 alias snippets='cd ~/.vim/bundle/vim-snippets/snippets'
 
