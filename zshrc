@@ -147,6 +147,7 @@ alias npmiweb='npmd webpack webpack-dev-server react react-dom react-router reac
 
 alias snippets='cd ~/.vim/bundle/vim-snippets/snippets'
 
-function gcl() {
+function gclo() {
     git clone "https://github.com/$1/$2"
+    cd $2
 }
