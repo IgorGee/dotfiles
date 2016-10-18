@@ -134,7 +134,7 @@ alias eg='vim ~/.oh-my-zsh/plugins/git/git.plugin.zsh'
 alias et='vim ~/dotfiles/tmux.conf'
 alias tmux='tmux -2'
 
-alias babelinit='printf "{\n\tpresets: [\"es2015\", \"react\"]\n}\n" >> .babelrc'
+alias babelinit='printf "{\n\tpresets: [\"latest\", \"react\"]\n}\n" >> .babelrc'
 alias npminit='npm init -y; babelinit; addNpmDevScript; addNpmStartScript'
 alias addNpmStartScript='sed -i "7i \\\ \ \ \ \"start\": \"babel-node ./node_modules/webpack/bin/webpack.js\"," package.json'
 alias addNpmDevScript='sed -i "7i \\\ \ \ \ \"dev\": \"babel-node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --content-base src --inline --hot\"," package.json'
