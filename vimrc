@@ -59,8 +59,8 @@ colorscheme jellybeans       					" set colorscheme from vim-colorschemes
 set noswapfile                                  " don't create any .swp files
 set lazyredraw                                  " redraw only when we need to, faster macros
 
-set tabstop=4                                   " number of visual spaces per TAB
-set shiftwidth=4                                " indentation takes up 4 spaces
+set tabstop=2                                   " number of visual spaces per TAB
+set shiftwidth=2                                " indentation takes up 2 spaces
 set expandtab
 set autoindent                                  " copy indentation of previous line
 set smartindent                                 " adds levels of indentation in some situations
