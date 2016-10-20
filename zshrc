@@ -144,7 +144,7 @@ alias yarni='yarn install'
 alias yarna='yarn add'
 alias yarnd='yarn add --dev'
 alias yarng='yarn add -g'
-alias yarniweb='yarnd webpack webpack-dev-server react react-dom react-router react-router-redux redux babel-cli babel-core babel-loader babel-preset-latest babel-preset-react style-loader css-loader sass-loader node-sass'
+alias yarniweb='yarnd webpack webpack-dev-server react react-dom react-router react-router-redux redux babel-cli babel-core babel-loader babel-preset-latest babel-preset-react style-loader css-loader sass-loader node-sass postcss autoprefixer lost'
 
 alias bnode='./node_modules/.bin/babel-node'
 
