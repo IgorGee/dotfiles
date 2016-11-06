@@ -128,6 +128,12 @@ setopt HIST_FIND_NO_DUPS
 
 NPM_CONFIG_PREFIX=~/.npm-global
 
+alias sa='sudo apt'
+alias sau='sa update'
+alias sai='sau; sa install'
+alias safu='sa full-upgrade'
+alias sar='sa remove'
+
 alias ez='vim ~/dotfiles/zshrc'
 alias ev='vim ~/dotfiles/vimrc'
 alias eg='vim ~/.oh-my-zsh/plugins/git/git.plugin.zsh'
@@ -153,4 +159,8 @@ alias snippets='cd ~/.vim/bundle/vim-snippets/snippets'
 function gclo() {
     git clone "https://github.com/$1/$2"
     cd $2
+}
+
+function saar() {
+  sudo add-apt-repository ppa:$1/$2
 }
