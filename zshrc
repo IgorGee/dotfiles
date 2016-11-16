@@ -128,6 +128,8 @@ setopt HIST_FIND_NO_DUPS
 
 NPM_CONFIG_PREFIX=~/.npm-global
 
+alias arduino='/opt/arduino-1.6.12/arduino'
+
 alias sa='sudo apt'
 alias sau='sa update'
 alias sai='sau; sa install'
