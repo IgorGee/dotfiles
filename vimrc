@@ -22,7 +22,6 @@ Plugin 'scrooloose/syntastic'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'SirVer/Ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'sjl/gundo.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
@@ -45,8 +44,6 @@ let g:syntastic_javascript_checkers = ['eslint']
 
 let g:delimitMate_expand_cr = 1                 " Add \n and <TAB> when entering {}
 let g:delimitMate_expand_space = 1
-
-nnoremap <Leader>u :GundoToggle<CR>
 
 nnoremap <Leader>t :TagbarToggle<CR>
 
