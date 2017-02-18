@@ -148,11 +148,9 @@ alias insertScriptsField='sed -i "5i \\\ \ \"scripts\": {\n\ \ }," package.json'
 alias addyarnStartScript='sed -i "6i \\\ \ \ \ \"start\": \"./node_modules/babel-cli/bin/babel-node.js ./node_modules/webpack/bin/webpack.js\"," package.json'
 alias addyarnDevScript='sed -i "6i \\\ \ \ \ \"dev\": \"./node_modules/babel-cli/bin/babel-node.js ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --content-base src --inline --hot\"" package.json'
 
-alias yarni='yarn install'
 alias yarna='yarn add'
 alias yarnd='yarn add --dev'
-alias yarng='yarn add -g'
-alias yarniweb='yarnd webpack webpack-dev-server react react-dom react-router react-router-redux redux babel-cli babel-core babel-loader babel-preset-latest babel-preset-react style-loader css-loader sass-loader node-sass postcss autoprefixer lost'
+alias yarng='sudo yarn global add'
 
 alias bnode='./node_modules/.bin/babel-node'
 
