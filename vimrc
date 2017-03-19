@@ -26,6 +26,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'vimwiki/vimwiki'
+Plugin 'suan/vim-instant-markdown'
 
 call vundle#end()                               " required
 filetype plugin indent on                       " required
@@ -44,6 +46,8 @@ let g:syntastic_javascript_checkers = ['eslint']
 
 let g:delimitMate_expand_cr = 1                 " Add \n and <TAB> when entering {}
 let g:delimitMate_expand_space = 1
+
+let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md'}]
 
 nnoremap <Leader>t :TagbarToggle<CR>
 
