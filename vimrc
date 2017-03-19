@@ -49,6 +49,8 @@ let g:delimitMate_expand_space = 1
 
 let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md'}]
 
+let g:instant_markdown_autostart = 0
+
 nnoremap <Leader>t :TagbarToggle<CR>
 
 nnoremap <Leader>n :NERDTreeToggle<CR>
