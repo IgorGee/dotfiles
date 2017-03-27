@@ -142,12 +142,6 @@ alias eg='vim ~/.oh-my-zsh/plugins/git/git.plugin.zsh'
 alias et='vim ~/dotfiles/tmux.conf'
 alias tmux='tmux -2'
 
-alias babelinit='printf "{\n\tpresets: [\"latest\", \"react\"]\n}\n" >> .babelrc'
-alias yarninit='yarn init -y; babelinit; insertScriptsField; addyarnDevScript; addyarnStartScript'
-alias insertScriptsField='sed -i "5i \\\ \ \"scripts\": {\n\ \ }," package.json'
-alias addyarnStartScript='sed -i "6i \\\ \ \ \ \"start\": \"./node_modules/babel-cli/bin/babel-node.js ./node_modules/webpack/bin/webpack.js\"," package.json'
-alias addyarnDevScript='sed -i "6i \\\ \ \ \ \"dev\": \"./node_modules/babel-cli/bin/babel-node.js ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --content-base src --inline --hot\"" package.json'
-
 alias yarna='yarn add'
 alias yarnd='yarn add --dev'
 alias yarng='sudo yarn global add'
