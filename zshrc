@@ -162,5 +162,5 @@ function gclo() {
 }
 
 function saar() {
-  sudo add-apt-repository ppa:$1/$2
+  sudo add-apt-repository ppa:$1/$2 -y
 }
