@@ -151,8 +151,8 @@ alias bnode='./node_modules/.bin/babel-node'
 alias snippets='cd ~/.vim/bundle/vim-snippets/snippets'
 
 function gclo() {
-    git clone "https://github.com/$1/$2"
-    cd $2
+  git clone "https://github.com/$1/$2"
+  cd $2
 }
 
 function saar() {
