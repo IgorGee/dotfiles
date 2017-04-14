@@ -158,3 +158,7 @@ function gclo() {
 function saar() {
   sudo add-apt-repository ppa:$1/$2 -y
 }
+
+function daemon() {
+  nohup "$@" > /dev/null 2>&1 &
+}
