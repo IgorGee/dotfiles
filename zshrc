@@ -148,6 +148,11 @@ alias yarng='sudo yarn global add'
 
 alias bnode='./node_modules/.bin/babel-node'
 
+alias b='bundle'
+alias bi='b install'
+alias be='b exec'
+alias bu='b update'
+
 alias snippets='cd ~/.vim/bundle/vim-snippets/snippets'
 
 function gclo() {
