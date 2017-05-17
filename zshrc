@@ -49,7 +49,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git rails ruby rbenv node)
 
 # User configuration
 
@@ -153,6 +153,8 @@ alias bi='b install'
 alias be='b exec'
 alias bu='b update'
 
+alias migrate="be rake db:migrate; RAILS_ENV=test be rake db:migrate"
+
 alias snippets='cd ~/.vim/bundle/vim-snippets/snippets'
 
 function gclo() {
@@ -167,3 +169,6 @@ function saar() {
 function daemon() {
   nohup "$@" > /dev/null 2>&1 &
 }
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
