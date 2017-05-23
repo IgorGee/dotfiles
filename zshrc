@@ -153,6 +153,10 @@ alias bi='b install'
 alias be='b exec'
 alias bu='b update'
 
+alias rs='be rails server -b 0.0.0.0'
+alias rtdb='RAILS_ENV=test be rake db:drop db:create db:migrate db:reload_views db:seed'
+alias rts='RAILS_ENV=test rs'
+
 alias snippets='cd ~/.vim/bundle/vim-snippets/snippets'
 
 function gclo() {
@@ -167,3 +171,5 @@ function saar() {
 function daemon() {
   nohup "$@" > /dev/null 2>&1 &
 }
+
+eval "$(rbenv init -)"
