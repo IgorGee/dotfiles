@@ -160,7 +160,7 @@ alias rts='RAILS_ENV=test rs'
 alias snippets='cd ~/.vim/bundle/vim-snippets/snippets'
 
 function gclo() {
-  git clone "https://github.com/$1/$2"
+  git clone "git@github.com:$1/$2.git"
   cd $2
 }
 
