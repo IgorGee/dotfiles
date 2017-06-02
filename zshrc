@@ -154,6 +154,7 @@ alias be='b exec'
 alias bu='b update'
 
 alias rs='be rails server -b 0.0.0.0'
+alias rc='rails console'
 alias rtdb='RAILS_ENV=test be rake db:drop db:create db:migrate db:reload_views db:seed'
 alias rts='RAILS_ENV=test rs'
 
