@@ -38,7 +38,6 @@ let mapleader = "\<Space>"                      " set leader key to Spacebar
 let g:airline_theme='jellybeans'
 let g:airline#extension#tmuxline#enabled = 1    " Apply colorscheme in tmux
 let g:airline#extensions#tabline#enabled = 1    " Show tabs of files on top
-
 let airline#extensions#tmuxline#snapshot_file = "~/.tmux-status.conf"
 
 let g:syntastic_python_checkers = ['pylint']    " Set python linter to pylint
@@ -46,11 +45,10 @@ let g:syntastic_python_pylint_args = "--const-rgx='[a-z_][a-z0-9_]{2,30}$'"
 let g:syntastic_cpp_compiler = 'g++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_error_symbol = "✗"
 
 let g:delimitMate_expand_cr = 1                 " Add \n and <TAB> when entering {}
 let g:delimitMate_expand_space = 1
-
-let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md'}]
 
 let g:instant_markdown_autostart = 0
 
@@ -63,6 +61,7 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
+nnoremap <Leader>t :TagbarToggle<CR>
 nnoremap <Leader>n :NERDTreeToggle<CR>
 
 filetype indent on                              " load filetype-specific indent files
