@@ -8,6 +8,7 @@ call vundle#begin()
 
 Plugin 'airblade/vim-gitgutter'
 Plugin 'edkolev/tmuxline.vim'
+Plugin 'ervandew/supertab'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'honza/vim-snippets'
@@ -51,7 +52,14 @@ let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md'}]
 
 let g:instant_markdown_autostart = 0
 
-nnoremap <Leader>t :TagbarToggle<CR>
+" YouCompleteMe and UltiSnips compatibility, with the helper of supertab
+let g:ycm_key_list_select_completion   = ['<C-j>', '<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType    = '<C-n>'
+let g:SuperTabCrMapping                = 0
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 nnoremap <Leader>n :NERDTreeToggle<CR>
 
