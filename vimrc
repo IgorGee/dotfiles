@@ -34,7 +34,7 @@ filetype plugin indent on                       " required
 
 let mapleader = "\<Space>"                      " set leader key to Spacebar
 
-let g:airline_theme='murmur'
+let g:airline_theme='jellybeans'
 let g:airline#extension#tmuxline#enabled = 1    " Apply colorscheme in tmux
 let g:airline#extensions#tabline#enabled = 1    " Show tabs of files on top
 
