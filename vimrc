@@ -10,15 +10,14 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'edkolev/tmuxline.vim'
-Plugin 'ervandew/supertab'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
-Plugin 'marijnh/tern_for_vim'                   " Provide Tern-based JavaScript editing support
 Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
+Plugin 'vim-syntastic/syntastic'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'SirVer/Ultisnips'
 Plugin 'honza/vim-snippets'
@@ -26,7 +25,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'vimwiki/vimwiki'
 Plugin 'suan/vim-instant-markdown'
 
 call vundle#end()                               " required
@@ -60,7 +58,7 @@ nnoremap <Leader>n :NERDTreeToggle<CR>
 filetype indent on                              " load filetype-specific indent files
 set t_Co=256                                    " enable 256 colors in vim
 set laststatus=2                                " status bar on bottom
-colorscheme jellybeans       					" set colorscheme from vim-colorschemes
+colorscheme jellybeans                          " set colorscheme from vim-colorschemes
 set noswapfile                                  " don't create any .swp files
 set lazyredraw                                  " redraw only when we need to, faster macros
 
