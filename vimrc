@@ -38,6 +38,8 @@ let g:airline_theme='murmur'
 let g:airline#extension#tmuxline#enabled = 1    " Apply colorscheme in tmux
 let g:airline#extensions#tabline#enabled = 1    " Show tabs of files on top
 
+let airline#extensions#tmuxline#snapshot_file = "~/.tmux-status.conf"
+
 let g:syntastic_python_checkers = ['pylint']    " Set python linter to pylint
 let g:syntastic_python_pylint_args = "--const-rgx='[a-z_][a-z0-9_]{2,30}$'"
 let g:syntastic_cpp_compiler = 'g++'
