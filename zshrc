@@ -142,9 +142,12 @@ alias eg='vim ~/.oh-my-zsh/plugins/git/git.plugin.zsh'
 alias et='vim ~/dotfiles/tmux.conf'
 alias tmux='tmux -2'
 
-alias yarna='yarn add'
-alias yarnd='yarn add --dev'
-alias yarng='sudo yarn global add'
+alias y='yarn'
+alias ya='y add'
+alias yd='y add --dev'
+alias yg='sudo y global add'
+alias ys='y start'
+alias yys='y && ys'
 
 alias bnode='./node_modules/.bin/babel-node'
 
