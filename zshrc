@@ -163,6 +163,8 @@ alias rts='RAILS_ENV=test rs'
 
 alias snippets='cd ~/.vim/bundle/vim-snippets/snippets'
 
+alias grbom='gfa && grb origin/master'
+
 function gclo() {
   git clone "git@github.com:$1/$2.git"
   cd $2
@@ -180,3 +182,4 @@ function daemon() {
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+export PATH="$PATH:`yarn global bin`"
