@@ -5,8 +5,7 @@ PPAs="git-core/ppa hluk/copyq nilarimogard/webupd8 zeal-developers/ppa webupd8te
 devPackages="vim tmux zsh git curl nautilus-dropbox copyq build-essential albert zeal atom"
 
 installPPAs() {
-  for i in $PPAs
-  do
+  for i in $PPAs; do
     sudo add-apt-repository -y ppa:$i
   done
   sudo apt update
