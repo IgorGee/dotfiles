@@ -130,8 +130,6 @@ NPM_CONFIG_PREFIX=~/.npm-global
 
 export EDITOR=vim
 
-alias arduino='/opt/arduino-1.6.12/arduino'
-
 alias sa='sudo apt'
 alias sau='sa update'
 alias sai='sau; sa install'
@@ -153,18 +151,6 @@ alias yys='y && ys'
 
 alias bnode='./node_modules/.bin/babel-node'
 
-alias b='bundle'
-alias bi='b install'
-alias be='b exec'
-alias bu='b update'
-
-alias rs='be rails server -b 0.0.0.0'
-alias rc='rails console'
-alias rtdb='RAILS_ENV=test be rake db:drop db:create db:migrate db:reload_views db:seed'
-alias rts='RAILS_ENV=test rs'
-
-alias snippets='cd ~/.vim/bundle/vim-snippets/snippets'
-
 alias grbom='gfa && grb origin/master'
 
 function gclo() {
@@ -179,9 +165,3 @@ function saar() {
 function daemon() {
   nohup "$@" > /dev/null 2>&1 &
 }
-
-
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
-export PATH="$PATH:`yarn global bin`"
