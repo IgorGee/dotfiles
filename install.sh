@@ -55,6 +55,12 @@ fixMouseAcceleration() {
   sudo cp ~/dotfiles/90-mouse.conf /usr/share/X11/xorg.conf.d
 }
 
+setupAutostartFiles() {
+  for file in ~/dotfiles/autostart/*.desktop; do
+    cp "$file" ~/.config/autostart/
+  done
+}
+
 installPPAs
 installDevPackages
 setupGitData
@@ -64,4 +70,5 @@ installOhMyZsh
 downloadAndInstallDotfiles
 installMissingDependenciesAndUpgrade
 fixMouseAcceleration
+setupAutostartFiles
 
