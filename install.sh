@@ -60,6 +60,10 @@ setupAutostartFiles() {
   done
 }
 
+setPowerButtonToSleep() {
+  gsettings set org.gnome.settings-daemon.plugins.power button-power suspend
+}
+
 installPPAs
 installDevPackages
 setupGitData
