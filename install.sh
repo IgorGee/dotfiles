@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PPAs="git-core/ppa hluk/copyq nilarimogard/webupd8 zeal-developers/ppa webupd8team/atom qbittorrent-team/qbittorrent-stable"
+PPAs="git-core/ppa hluk/copyq nilarimogard/webupd8 zeal-developers/ppa webupd8team/atom qbittorrent-team/qbittorrent-stable paulo-miguel-dias/pkppa"
 
 devPackages="vim tmux zsh git curl build-essential"
 
