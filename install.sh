@@ -2,7 +2,9 @@
 
 PPAs="git-core/ppa hluk/copyq nilarimogard/webupd8 zeal-developers/ppa webupd8team/atom"
 
-devPackages="vim tmux zsh git curl nautilus-dropbox copyq build-essential albert zeal atom"
+devPackages="vim tmux zsh git curl build-essential"
+
+desktopPackages="nautilus-dropbox copyq albert zeal atom"
 
 installPPAs() {
   for i in $PPAs; do
@@ -13,6 +15,7 @@ installPPAs() {
 
 installDevPackages() {
   sudo apt install -y $devPackages
+  sudo apt install -y $desktopPackages
   ln -s /usr/share/applications/albert.desktop ~/.config/autostart/
 }
 
