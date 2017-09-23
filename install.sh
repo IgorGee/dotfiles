@@ -1,10 +1,10 @@
 #!/bin/bash
 
-PPAs="git-core/ppa hluk/copyq nilarimogard/webupd8 zeal-developers/ppa webupd8team/atom"
+PPAs="git-core/ppa hluk/copyq nilarimogard/webupd8 zeal-developers/ppa webupd8team/atom qbittorrent-team/qbittorrent-stable"
 
 devPackages="vim tmux zsh git curl build-essential"
 
-desktopPackages="nautilus-dropbox copyq albert zeal atom"
+desktopPackages="nautilus-dropbox copyq albert zeal atom qbittorrent"
 
 installPPAs() {
   for i in $PPAs; do
