@@ -4,7 +4,7 @@ PPAs="git-core/ppa hluk/copyq nilarimogard/webupd8 zeal-developers/ppa webupd8te
 
 devPackages="vim tmux zsh git curl build-essential"
 
-desktopPackages="nautilus-dropbox copyq albert zeal atom qbittorrent"
+desktopPackages="nautilus-dropbox copyq albert zeal atom qbittorrent vlc"
 
 installPPAs() {
   for i in $PPAs; do
