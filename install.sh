@@ -1,10 +1,10 @@
 #!/bin/bash
 
-PPAs="git-core/ppa hluk/copyq nilarimogard/webupd8 zeal-developers/ppa webupd8team/atom qbittorrent-team/qbittorrent-stable paulo-miguel-dias/pkppa"
+PPAs="git-core/ppa hluk/copyq nilarimogard/webupd8 zeal-developers/ppa webupd8team/atom qbittorrent-team/qbittorrent-stable paulo-miguel-dias/pkppa noobslab/themes noobslab/icons"
 
 devPackages="vim tmux zsh git curl build-essential"
 
-desktopPackages="nautilus-dropbox copyq albert zeal atom qbittorrent vlc"
+desktopPackages="nautilus-dropbox copyq albert zeal atom qbittorrent vlc arc-theme arc-icons unity-tweak-tool"
 
 installPPAs() {
   for i in $PPAs; do
