@@ -4,7 +4,7 @@ PPAs="git-core/ppa hluk/copyq nilarimogard/webupd8 zeal-developers/ppa webupd8te
 
 devPackages="vim tmux zsh git curl build-essential"
 
-desktopPackages="nautilus-dropbox copyq albert zeal atom qbittorrent vlc arc-theme arc-icons unity-tweak-tool"
+desktopPackages="nautilus-dropbox copyq albert zeal atom qbittorrent vlc arc-theme arc-icons unity-tweak-tool spotify-client"
 
 installPPAs() {
   for i in $PPAs; do
@@ -15,6 +15,16 @@ installPPAs() {
 
 installDevPackages() {
   sudo apt install -y $devPackages
+}
+
+installDesktopPackages() {
+  prepareSpotifyInstallation() {
+    sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886 0DF731E45CE24F27EEEB1450EFDC8610341D9410
+    echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
+    sudo apt-get update
+  }
+
+  prepareSpotifyInstallation
   sudo apt install -y $desktopPackages
   ln -s /usr/share/applications/albert.desktop ~/.config/autostart/
 }
@@ -69,6 +79,7 @@ setPowerButtonToSleep() {
 
 installPPAs
 installDevPackages
+installDesktopPackages
 setupGitData
 installChrome
 installNodejs
