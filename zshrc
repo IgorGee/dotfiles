@@ -150,9 +150,16 @@ alias tmux='tmux -2'
 alias y='yarn'
 alias ya='y add'
 alias yd='y add --dev'
-alias yg='sudo y global add'
+alias yg='y global add'
 alias ys='y start'
+alias yu='y upgrade-interactive'
+alias yt='y test'
+alias yr='y remove'
 alias yys='y && ys'
+
+function yul() {
+  y upgrade-interactive "$@" --latest
+}
 
 alias bnode='./node_modules/.bin/babel-node'
 
