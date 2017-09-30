@@ -166,8 +166,13 @@ alias bnode='./node_modules/.bin/babel-node'
 alias grbom='gfa && grb origin/master'
 
 function gclo() {
-  git clone "git@github.com:$1/$2.git"
-  cd $2
+  if [[ $1 =~ git@github\.com:(.*)/(.*)\.git ]]; then
+    git clone $1
+    cd $match[2]
+  else
+    git clone "git@github.com:$1/$2.git"
+    cd $2
+  fi
 }
 
 function saar() {
