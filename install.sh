@@ -92,6 +92,7 @@ installOhMyZsh
 downloadAndInstallDotfiles
 installMissingDependenciesAndUpgrade
 fixMouseAcceleration
+setPowerButtonToSleep
 setupAutostartFiles
 setupServiceFiles
 
