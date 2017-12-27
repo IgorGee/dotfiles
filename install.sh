@@ -26,7 +26,6 @@ installDesktopPackages() {
 
   prepareSpotifyInstallation
   sudo apt install -y $desktopPackages
-  ln -s /usr/share/applications/albert.desktop ~/.config/autostart/
 }
 
 setupGitData() {
