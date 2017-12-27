@@ -72,6 +72,12 @@ setupAutostartFiles() {
   done
 }
 
+setupServiceFiles() {
+  for file in ~/dotfiles/services/*.service; do
+    sudo cp "$file" /etc/systemd/system/
+  done
+}
+
 setPowerButtonToSleep() {
   gsettings set org.gnome.settings-daemon.plugins.power button-power suspend
 }
@@ -87,4 +93,5 @@ downloadAndInstallDotfiles
 installMissingDependenciesAndUpgrade
 fixMouseAcceleration
 setupAutostartFiles
+setupServiceFiles
 

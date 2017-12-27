@@ -1,0 +1,16 @@
+#/etc/systemd/system/openvpn-resume.service
+#sudo systemctl enable openvpn-resume.service
+[Unit]
+Description=Restart openvpn at resume
+After=suspend.target
+After=hibernate.target
+After=hybrid-sleep.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/systemctl restart openvpn
+
+[Install]
+WantedBy=suspend.target
+WantedBy=hibernate.target
+WantedBy=hybrid-sleep.target
