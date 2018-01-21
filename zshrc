@@ -135,6 +135,8 @@ MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
 export EDITOR=vim
 
+alias pipi="pip install --user"
+
 alias sa='sudo apt'
 alias sau='sa update'
 alias sai='sau; sa install'
