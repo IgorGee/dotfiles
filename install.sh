@@ -66,6 +66,10 @@ fixMouseAcceleration() {
   sudo cp ~/dotfiles/90-mouse.conf /usr/share/X11/xorg.conf.d
 }
 
+changeAltDragBinding() {
+  gsettings set org.gnome.desktop.wm.preferences mouse-button-modifier "<Super>"
+}
+
 setupAutostartFiles() {
   for file in ~/dotfiles/autostart/*.desktop; do
     cp "$file" ~/.config/autostart/
@@ -92,6 +96,7 @@ installOhMyZsh
 downloadAndInstallDotfiles
 installMissingDependenciesAndUpgrade
 fixMouseAcceleration
+changeAltDragBinding
 setPowerButtonToSleep
 setupAutostartFiles
 setupServiceFiles
