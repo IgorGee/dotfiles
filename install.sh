@@ -1,12 +1,19 @@
 #!/bin/bash
 
-PPAs="git-core/ppa hluk/copyq nilarimogard/webupd8 zeal-developers/ppa webupd8team/atom qbittorrent-team/qbittorrent-stable paulo-miguel-dias/pkppa noobslab/themes noobslab/icons indicator-multiload/stable-daily"
+PPAs="git-core/ppa hluk/copyq nilarimogard/webupd8 zeal-developers/ppa qbittorrent-team/qbittorrent-stable paulo-miguel-dias/pkppa noobslab/themes noobslab/icons indicator-multiload/stable-daily"
 
-devPackages="vim tmux zsh git curl build-essential"
+devPackages="vim tmux zsh git build-essential docker-ce"
 
-desktopPackages="nautilus-dropbox copyq albert zeal atom qbittorrent vlc arc-theme arc-icons unity-tweak-tool spotify-client indicator-multiload openvpn"
+desktopPackages="code nautilus-dropbox copyq albert zeal qbittorrent vlc arc-theme arc-icons unity-tweak-tool spotify-client indicator-multiload openvpn"
 
 installPPAs() {
+  prepareDocker() {
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+    sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+  }
+
+  sudo apt install -y curl
+  prepareDocker
   for i in $PPAs; do
     sudo add-apt-repository -y ppa:$i
   done
@@ -18,13 +25,20 @@ installDevPackages() {
 }
 
 installDesktopPackages() {
-  prepareSpotifyInstallation() {
+  prepareSpotify() {
     sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886 0DF731E45CE24F27EEEB1450EFDC8610341D9410
     echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
-    sudo apt-get update
   }
 
-  prepareSpotifyInstallation
+  prepareVsCode() {
+    curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+    sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
+    sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+  }
+
+  prepareSpotify
+  prepareVsCode
+  sudo apt update
   sudo apt install -y $desktopPackages
 }
 
