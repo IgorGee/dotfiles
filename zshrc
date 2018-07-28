@@ -159,6 +159,11 @@ alias yt='y test'
 alias yr='y remove'
 alias yys='y && ys'
 
+alias ps='sudo prime-select '
+alias psi='ps intel && reboot'
+alias psn='ps nvidia && reboot'
+alias psq='ps query'
+
 function yul() {
   y upgrade-interactive "$@" --latest
 }
