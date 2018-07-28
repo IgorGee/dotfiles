@@ -64,10 +64,8 @@ downloadAndInstallDotfiles() {
 }
 
 installNodejs() {
-  curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-  sudo apt install -y nodejs
-  mkdir ~/.npm-packages
-  echo "prefix=~/.npm-packages" >> ~/.npmrc
+  N_PREFIX=~/.n
+  curl -L https://git.io/n-install | bash
 }
 
 installMissingDependenciesAndUpgrade() {
