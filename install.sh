@@ -1,10 +1,10 @@
 #!/bin/bash
 
-PPAs="git-core/ppa hluk/copyq nilarimogard/webupd8 zeal-developers/ppa qbittorrent-team/qbittorrent-stable paulo-miguel-dias/pkppa noobslab/themes noobslab/icons indicator-multiload/stable-daily"
+PPAs="git-core/ppa hluk/copyq nilarimogard/webupd8 zeal-developers/ppa qbittorrent-team/qbittorrent-stable paulo-miguel-dias/pkppa"
 
 devPackages="vim tmux zsh git build-essential docker-ce"
 
-desktopPackages="code nautilus-dropbox copyq albert zeal qbittorrent vlc arc-theme arc-icons unity-tweak-tool spotify-client indicator-multiload openvpn"
+desktopPackages="code nautilus-dropbox copyq albert zeal qbittorrent vlc spotify-client openvpn"
 
 installPPAs() {
   prepareDocker() {
@@ -26,7 +26,7 @@ installDevPackages() {
 
 installDesktopPackages() {
   prepareSpotify() {
-    sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886 0DF731E45CE24F27EEEB1450EFDC8610341D9410
+    sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
     echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
   }
 
@@ -75,31 +75,6 @@ installMissingDependenciesAndUpgrade() {
   sudo apt -y full-upgrade
 }
 
-fixMouseAcceleration() {
-  sudo mkdir /usr/share/X11/xorg.conf.d
-  sudo cp ~/dotfiles/90-mouse.conf /usr/share/X11/xorg.conf.d
-}
-
-changeAltDragBinding() {
-  gsettings set org.gnome.desktop.wm.preferences mouse-button-modifier "<Super>"
-}
-
-setupAutostartFiles() {
-  for file in ~/dotfiles/autostart/*.desktop; do
-    cp "$file" ~/.config/autostart/
-  done
-}
-
-setupServiceFiles() {
-  for file in ~/dotfiles/services/*.service; do
-    sudo cp "$file" /etc/systemd/system/
-  done
-}
-
-setPowerButtonToSleep() {
-  gsettings set org.gnome.settings-daemon.plugins.power button-power suspend
-}
-
 installPPAs
 installDevPackages
 installDesktopPackages
@@ -109,9 +84,4 @@ installNodejs
 installOhMyZsh
 downloadAndInstallDotfiles
 installMissingDependenciesAndUpgrade
-fixMouseAcceleration
-changeAltDragBinding
-setPowerButtonToSleep
-setupAutostartFiles
-setupServiceFiles
 
