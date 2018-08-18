@@ -9,17 +9,14 @@ call vundle#begin()
 Plugin 'airblade/vim-gitgutter'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'edkolev/tmuxline.vim'
-Plugin 'ervandew/supertab'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'honza/vim-snippets'
-Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'mtscout6/syntastic-local-eslint.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'scrooloose/nerdtree'
 Plugin 'sheerun/vim-polyglot'
-Plugin 'SirVer/Ultisnips'
 Plugin 'suan/vim-instant-markdown'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
@@ -46,19 +43,7 @@ let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_error_symbol = "✗"
 
-let g:delimitMate_expand_cr = 1                 " Add \n and <TAB> when entering {}
-let g:delimitMate_expand_space = 1
-
 let g:instant_markdown_autostart = 0
-
-" YouCompleteMe and UltiSnips compatibility, with the helper of supertab
-let g:ycm_key_list_select_completion   = ['<C-j>', '<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType    = '<C-n>'
-let g:SuperTabCrMapping                = 0
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 nnoremap <Leader>t :TagbarToggle<CR>
 nnoremap <Leader>n :NERDTreeToggle<CR>
@@ -110,5 +95,3 @@ function! <SID>StripTrailingWhiteSpaces()
 endfun
 
 autocmd BufWritePre * :call <SID>StripTrailingWhiteSpaces()
-
-autocmd FileType javascript.jsx UltiSnipsAddFiletypes html
