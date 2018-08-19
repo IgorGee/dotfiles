@@ -186,3 +186,19 @@ function daemon() {
   nohup "$@" > /dev/null 2>&1 &
 }
 
+# OpenVPN
+function vpn() {
+  pid="$(pgrep openvpn)"
+  if [ -z "$pid" ]; then
+    echo "current pid: ${pid}"
+    sudo systemctl start openvpn@client.service
+  else
+    echo "killing pid: ${pid}"
+    sudo systemctl stop openvpn@client.service
+    sudo systemctl start openvpn@client.service
+    echo "new pid: $(pgrep openvpn)"
+  fi
+}
+
+alias killvpn='sudo systemctl stop openvpn@client.service'
+
