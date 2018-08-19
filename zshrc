@@ -202,3 +202,6 @@ function vpn() {
 
 alias killvpn='sudo systemctl stop openvpn@client.service'
 
+# Docker
+alias d='docker'
+alias dc='d container'
