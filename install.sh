@@ -4,7 +4,7 @@ PPAs="git-core/ppa hluk/copyq nilarimogard/webupd8 zeal-developers/ppa qbittorre
 
 devPackages="vim tmux zsh git build-essential docker-ce"
 
-desktopPackages="code nautilus-dropbox copyq albert zeal qbittorrent vlc spotify-client openvpn"
+desktopPackages="code nautilus-dropbox copyq albert zeal qbittorrent vlc spotify-client"
 
 installPPAs() {
   prepareDocker() {

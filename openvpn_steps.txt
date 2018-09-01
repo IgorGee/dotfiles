@@ -1,5 +1,0 @@
-0. create a .vpn folder in home to do all this
-1. get ovpn file
-2. do this https://github.com/masterkorp/openvpn-update-resolv-conf
-
-Note: --daemon requires that this script be placed in the openvpn folder
