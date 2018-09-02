@@ -131,6 +131,8 @@ unset MANPATH # delete if you already modified MANPATH elsewhere in your config
 
 export EDITOR=vim
 
+alias mkdir="take"
+
 alias pipi="pip install --user"
 
 alias sa='sudo apt'
