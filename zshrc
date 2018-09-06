@@ -138,7 +138,7 @@ alias pipi="pip install --user"
 alias sa='sudo apt'
 alias sau='sa update'
 alias sai='sau; sa install'
-alias safu='sa full-upgrade'
+alias safu='sa full-upgrade -y'
 alias sar='sa remove'
 
 alias ez='vim ~/dotfiles/zshrc'
@@ -147,6 +147,8 @@ alias eg='vim ~/.oh-my-zsh/plugins/git/git.plugin.zsh'
 alias et='vim ~/dotfiles/tmux.conf'
 alias tmux='tmux -2'
 
+export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
+export PATH="$(yarn global bin):$PATH"
 alias y='yarn'
 alias ya='y add'
 alias yd='y add --dev'
@@ -194,4 +196,12 @@ alias dc='d container'
 alias di='d image'
 alias dv='d volume'
 
-export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /home/igor/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/igor/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /home/igor/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh ]] && . /home/igor/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh
+
+export AWS_ACCESS_KEY_ID="$(awk '/aws_access_key_id/{print $NF}' ~/.aws/credentials)"
+export AWS_SECRET_ACCESS_KEY="$(awk '/aws_secret_access_key/{print $NF}' ~/.aws/credentials)"
