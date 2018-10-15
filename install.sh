@@ -22,6 +22,7 @@ installPPAs() {
 
 installDevPackages() {
   sudo apt install -y $devPackages
+  sudo usermod -a -G docker $USER
 }
 
 installDesktopPackages() {
