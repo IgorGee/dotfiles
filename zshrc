@@ -56,6 +56,9 @@ plugins=(git npm node python react-native yarn)
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# For pip
+export PATH=~/.local/bin:$PATH
+
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
