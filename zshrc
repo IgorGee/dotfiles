@@ -142,6 +142,7 @@ alias sa='sudo apt'
 alias sau='sa update'
 alias sai='sau; sa install'
 alias safu='sa full-upgrade -y'
+alias saarm='sa autoremove'
 alias sar='sa remove'
 
 alias ez='vim ~/dotfiles/zshrc'
