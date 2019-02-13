@@ -4,7 +4,7 @@ PPAs="git-core/ppa hluk/copyq nilarimogard/webupd8 zeal-developers/ppa qbittorre
 
 devPackages="vim tmux zsh git build-essential docker-ce"
 
-desktopPackages="code nautilus-dropbox copyq albert zeal qbittorrent vlc spotify-client"
+desktopPackages="code nautilus-dropbox copyq albert zeal qbittorrent vlc"
 
 installPPAs() {
   prepareDocker() {
@@ -26,18 +26,12 @@ installDevPackages() {
 }
 
 installDesktopPackages() {
-  prepareSpotify() {
-    sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
-    echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
-  }
-
   prepareVsCode() {
     curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
     sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
     sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
   }
 
-  prepareSpotify
   prepareVsCode
   sudo apt update
   sudo apt install -y $desktopPackages
