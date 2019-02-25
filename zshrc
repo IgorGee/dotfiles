@@ -151,7 +151,6 @@ alias eg='vim ~/.oh-my-zsh/plugins/git/git.plugin.zsh'
 alias et='vim ~/dotfiles/tmux.conf'
 alias tmux='tmux -2'
 
-export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
 export PATH="$(yarn global bin):$PATH"
 alias y='yarn'
 alias ya='y add'
@@ -208,3 +207,7 @@ alias dv='d volume'
 
 export AWS_ACCESS_KEY_ID="$(awk '/aws_access_key_id/{print $NF}' ~/.aws/credentials)"
 export AWS_SECRET_ACCESS_KEY="$(awk '/aws_secret_access_key/{print $NF}' ~/.aws/credentials)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
