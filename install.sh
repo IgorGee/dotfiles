@@ -2,7 +2,7 @@
 
 PPAs="git-core/ppa hluk/copyq nilarimogard/webupd8 zeal-developers/ppa qbittorrent-team/qbittorrent-stable paulo-miguel-dias/pkppa"
 
-devPackages="vim tmux zsh git build-essential docker-ce"
+devPackages="vim tmux zsh git build-essential docker-ce python3-pip"
 
 desktopPackages="code nautilus-dropbox copyq albert zeal qbittorrent vlc"
 
