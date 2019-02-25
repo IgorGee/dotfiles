@@ -153,6 +153,7 @@ alias tmux='tmux -2'
 
 export PATH="$(yarn global bin):$PATH"
 alias y='yarn'
+alias yi='yarn init -y'
 alias ya='y add'
 alias yd='y add --dev'
 alias yg='y global add'
@@ -181,6 +182,16 @@ function gclo() {
   else
     git clone "git@github.com:$1/$2.git"
     cd $2
+  fi
+}
+
+# gcpr author repo-name
+# gcpr author repo-name FETCH_HEAD~3..FETCH_HEAD
+function gcpr() {
+  if [[ -z "$3" ]]; then
+    git fetch "git@github.com:$1/$2.git" master && git cherry-pick FETCH_HEAD
+  else
+    git fetch "git@github.com:$1/$2.git" master && git cherry-pick $3
   fi
 }
 
