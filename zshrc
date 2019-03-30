@@ -205,9 +205,14 @@ function daemon() {
 
 # Docker
 alias d='docker'
-alias dc='d container'
+alias dco='d container'
 alias di='d image'
 alias dv='d volume'
+
+alias dc='docker-compose'
+alias dcu='dc up'
+alias dcud='dc up -d'
+alias dcd='dc down'
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
