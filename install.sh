@@ -53,9 +53,12 @@ installOhMyZsh() {
 
 downloadAndInstallDotfiles() {
   git clone https://github.com/igorgee/dotfiles ~/dotfiles
-  ~/dotfiles/makesymlinks.sh
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+  ~/dotfiles/makesymlinks.sh
   vim +PluginInstall +qall
+  ~/.tmux/plugins/tpm/scripts/install_plugins.sh
 }
 
 installNodejs() {
