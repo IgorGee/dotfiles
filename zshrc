@@ -214,6 +214,13 @@ alias dcu='dc up'
 alias dcud='dc up -d'
 alias dcd='dc down'
 
+alias fix_zsh_history='\
+  mv ~/.zsh_history ~/.zsh_history_bad;\
+  strings .zsh_history_bad > .zsh_history;\
+  fc -R ~/.zsh_history;\
+  rm ~/.zsh_history_bad;\
+'
+
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
 [[ -f /home/igor/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/igor/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh
