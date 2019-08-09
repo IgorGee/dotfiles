@@ -223,14 +223,15 @@ alias fix_zsh_history='\
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /home/igor/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/igor/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh
+# [[ -f /home/igor/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/igor/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh
+
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /home/igor/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh ]] && . /home/igor/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh
+# [[ -f /home/igor/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh ]] && . /home/igor/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh
 
-export AWS_ACCESS_KEY_ID="$(awk '/aws_access_key_id/{print $NF}' ~/.aws/credentials)"
-export AWS_SECRET_ACCESS_KEY="$(awk '/aws_secret_access_key/{print $NF}' ~/.aws/credentials)"
+# export AWS_ACCESS_KEY_ID="$(awk '/aws_access_key_id/{print $NF}' ~/.aws/credentials)"
+# export AWS_SECRET_ACCESS_KEY="$(awk '/aws_secret_access_key/{print $NF}' ~/.aws/credentials)"
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
