@@ -49,7 +49,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git node yarn z)
+plugins=(git node yarn z tmux)
 
 # User configuration
 
@@ -134,6 +134,8 @@ unset MANPATH # delete if you already modified MANPATH elsewhere in your config
 
 export EDITOR=vim
 
+alias szsh='source ~/.zshrc'
+
 alias mkdir="take"
 
 alias pipi="pip install --user"
@@ -149,7 +151,9 @@ alias ez='vim ~/dotfiles/zshrc'
 alias ev='vim ~/dotfiles/vimrc'
 alias eg='vim ~/.oh-my-zsh/plugins/git/git.plugin.zsh'
 alias et='vim ~/dotfiles/tmux.conf'
-alias tmux='tmux -2'
+alias etc='vim ~/.oh-my-zsh/plugins/tmux/tmux.plugin.zsh'
+alias tm='tmux -2'
+alias tmres='pgrep -vx tmux > /dev/null && tmux new -d -s delete-me && tmux run-shell ~/.tmux/plugins/tmux-resurrect/scripts/restore.sh && tmux kill-session -t delete-me && tmux attach || tmux attach'
 
 export PATH="$(yarn global bin):$PATH"
 alias y='yarn'
