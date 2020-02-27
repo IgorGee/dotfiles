@@ -1,26 +1,32 @@
 #!/bin/bash
 
-PPAs="git-core/ppa hluk/copyq nilarimogard/webupd8 zeal-developers/ppa qbittorrent-team/qbittorrent-stable paulo-miguel-dias/pkppa"
+devPPAs="git-core/ppa"
+desktopPPAs="hluk/copyq nilarimogard/webupd8 zeal-developers/ppa qbittorrent-team/qbittorrent-stable paulo-miguel-dias/pkppa"
 
 devPackages="vim tmux zsh git build-essential docker-ce python3-pip"
-
 desktopPackages="code nautilus-dropbox copyq albert zeal qbittorrent vlc"
 
-installPPAs() {
-  prepareDocker() {
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-    sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-  }
-
+prepareDocker() {
   sudo apt install -y curl
-  prepareDocker
-  for i in $PPAs; do
+  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+}
+
+installDevPPAs() {
+  for i in $devPPAs; do
     sudo add-apt-repository -y ppa:$i
   done
-  sudo apt update
+}
+
+installDesktopPPAs() {
+  for i in $desktopPPAs; do
+    sudo add-apt-repository -y ppa:$i
+  done
 }
 
 installDevPackages() {
+  installDevPPAs
+  sudo apt update
   sudo apt install -y $devPackages
   sudo usermod -a -G docker $USER
 }
@@ -32,19 +38,21 @@ installDesktopPackages() {
     sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
   }
 
+  installChrome() {
+    curl -O https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    sudo dpkg -i --force-depends google-chrome-stable_current_amd64.deb
+  }
+
   prepareVsCode
+  installDevPPAs
   sudo apt update
   sudo apt install -y $desktopPackages
+  installChrome
 }
 
 setupGitData() {
   git config --global user.email "goldvekht.igor@gmail.com"
   git config --global user.name "Igor Goldvekht"
-}
-
-installChrome() {
-  curl -O https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-  sudo dpkg -i --force-depends google-chrome-stable_current_amd64.deb
 }
 
 installOhMyZsh() {
@@ -72,11 +80,10 @@ installMissingDependenciesAndUpgrade() {
   sudo apt -y full-upgrade
 }
 
-installPPAs
+prepareDocker
 installDevPackages
-installDesktopPackages
+# installDesktopPackages
 setupGitData
-installChrome
 installNodejs
 installOhMyZsh
 downloadAndInstallDotfiles
