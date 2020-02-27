@@ -69,10 +69,17 @@ downloadAndInstallDotfiles() {
   ~/.tmux/plugins/tpm/scripts/install_plugins.sh
 }
 
+installYarn() {
+  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+  echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+  sudo apt install --no-install-recommends yarn
+}
+
 installNodejs() {
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
   nvm install node
   nvm use node
+  installYarn
 }
 
 installMissingDependenciesAndUpgrade() {
