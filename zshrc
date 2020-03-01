@@ -179,6 +179,7 @@ alias yg='y global add'
 alias ys='y start'
 alias yu='y upgrade-interactive'
 alias yt='y test'
+alias yl='y lint'
 alias yr='y remove'
 alias yys='y && ys'
 
@@ -228,6 +229,11 @@ alias dco='d container'
 alias di='d image'
 alias dv='d volume'
 
+# Attach to a container
+# To detach without quiting the container: ctrl+p & ctrl+q
+alias da='d attach'
+alias de='d exec -ti'
+
 alias dc='docker-compose'
 alias dcu='dc up'
 alias dcud='dc up -d'
@@ -252,5 +258,7 @@ alias fix_zsh_history='\
 # export AWS_SECRET_ACCESS_KEY="$(awk '/aws_secret_access_key/{print $NF}' ~/.aws/credentials)"
 
 export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+PROMPT='%{$fg[white]%}%D{%m/%f/%y} %D{%H:%M:%S} '$PROMPT
