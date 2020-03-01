@@ -60,6 +60,7 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 export PATH=~/.local/bin:$PATH
 
 source $ZSH/oh-my-zsh.sh
+source ~/.nix-profile/etc/profile.d/nix.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -146,6 +147,20 @@ alias sai='sau; sa install'
 alias safu='sa full-upgrade -y'
 alias saarm='sa autoremove'
 alias sar='sa remove'
+
+alias nzsh='nix-shell --command zsh'
+alias ninstall='nix-env -i'
+ninstallh() {nix-env -f "<nixpkgs>" -iA haskellPackages."$@"; }
+alias nremove='nix-env -e'
+alias nshell='nix-shell -p'
+alias nupdate='nix-channel --update nixpkgs; nix-env -u "*"'
+alias nrollback='nix-env rollback'
+alias ngc='nix-collect-garbage -d'
+
+alias s2c='stack2cabal'
+alias c2n='cabal2nix --shell . > default.nix'
+alias s2n='s2c && c2n'
+alias ct='cabal test --test-show-details=direct; hlint .'
 
 alias ez='vim ~/dotfiles/zshrc'
 alias ev='vim ~/dotfiles/vimrc'
