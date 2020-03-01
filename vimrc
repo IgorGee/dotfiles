@@ -8,7 +8,7 @@ call vundle#begin()
 
 Plugin 'airblade/vim-gitgutter'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'edkolev/tmuxline.vim'
+" Plugin 'edkolev/tmuxline.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'honza/vim-snippets'
@@ -32,9 +32,9 @@ filetype plugin indent on                       " required
 let mapleader = "\<Space>"                      " set leader key to Spacebar
 
 let g:airline_theme='jellybeans'
-let g:airline#extension#tmuxline#enabled = 1    " Apply colorscheme in tmux
+let g:airline#extension#tmuxline#enabled = 0    " Apply colorscheme in tmux
 let g:airline#extensions#tabline#enabled = 1    " Show tabs of files on top
-let airline#extensions#tmuxline#snapshot_file = "~/.tmux-status.conf"
+" let airline#extensions#tmuxline#snapshot_file = "~/.tmux-status.conf"
 
 let g:syntastic_python_checkers = ['pylint']    " Set python linter to pylint
 let g:syntastic_python_pylint_args = "--const-rgx='[a-z_][a-z0-9_]{2,30}$'"
