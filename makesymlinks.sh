@@ -2,7 +2,7 @@
 
 dir=~/dotfiles
 olddir=~/dotfiles_old
-files="bashrc vimrc zshrc tmux.conf"
+files="bashrc vimrc zshrc tmux.conf spacemacs"
 
 # create dotfiles_old in homedir
 mkdir -p $olddir

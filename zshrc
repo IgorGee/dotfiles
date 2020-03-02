@@ -167,7 +167,7 @@ alias ev='vim ~/dotfiles/vimrc'
 alias eg='vim ~/.oh-my-zsh/plugins/git/git.plugin.zsh'
 alias et='vim ~/dotfiles/tmux.conf'
 alias etc='vim ~/.oh-my-zsh/plugins/tmux/tmux.plugin.zsh'
-alias ee='vim ~/.emacs.d/init.el'
+alias ee='vim ~/.spacemacs'
 alias tm='tmux -2'
 alias tmres='pgrep -vx tmux > /dev/null && tmux new -d -s delete-me && tmux run-shell ~/.tmux/plugins/tmux-resurrect/scripts/restore.sh && tmux kill-session -t delete-me && tmux attach || tmux attach'
 
