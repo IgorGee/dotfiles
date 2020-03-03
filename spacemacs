@@ -44,6 +44,7 @@ values."
      evil-snipe
      git
      markdown
+     lsp
      org
      (shell :variables
             shell-default-height 30

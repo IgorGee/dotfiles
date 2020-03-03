@@ -23,3 +23,8 @@
   (find-file "~/.spacemacs-user-config.el"))
 
 (spacemacs/set-leader-keys "feu" 'find-user-config-dotfile)
+
+;; 1. open haskell-interactive, terminal, send varying command
+;; 2. escape, run evil move up, evil move right
+
+(haskell-process-load-file)
