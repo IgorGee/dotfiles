@@ -1,57 +1,15 @@
-set encoding=utf8
+set clipboard^=unnamedplus "Share clipboard registries. Could also do "*y and "*p
 
-set nocompatible                                " be iMproved, required
-filetype off                                    " required
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'airblade/vim-gitgutter'
-Plugin 'editorconfig/editorconfig-vim'
-" Plugin 'edkolev/tmuxline.vim'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'gmarik/Vundle.vim'
-Plugin 'honza/vim-snippets'
-Plugin 'majutsushi/tagbar'
-Plugin 'mtscout6/syntastic-local-eslint.vim'
-Plugin 'Raimondi/delimitMate'
-Plugin 'scrooloose/nerdtree'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'suan/vim-instant-markdown'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-
-call vundle#end()                               " required
-filetype plugin indent on                       " required
-
-let mapleader = "\<Space>"                      " set leader key to Spacebar
-
-let g:airline_theme='jellybeans'
-let g:airline#extension#tmuxline#enabled = 0    " Apply colorscheme in tmux
-let g:airline#extensions#tabline#enabled = 1    " Show tabs of files on top
-" let airline#extensions#tmuxline#snapshot_file = "~/.tmux-status.conf"
-
-let g:syntastic_python_checkers = ['pylint']    " Set python linter to pylint
-let g:syntastic_python_pylint_args = "--const-rgx='[a-z_][a-z0-9_]{2,30}$'"
-let g:syntastic_cpp_compiler = 'g++'
-let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_error_symbol = "✗"
-
-let g:instant_markdown_autostart = 0
-
-nnoremap <Leader>t :TagbarToggle<CR>
-nnoremap <Leader>n :NERDTreeToggle<CR>
+" Speed
+set nocompatible
+set synmaxcol=300
+set ttyfast
+set updatetime=100
 
 filetype indent on                              " load filetype-specific indent files
 set t_Co=256                                    " enable 256 colors in vim
 set laststatus=2                                " status bar on bottom
-colorscheme jellybeans                          " set colorscheme from vim-colorschemes
+colorscheme gruvbox                             " set colorscheme from vim-colorschemes
 set noswapfile                                  " don't create any .swp files
 set lazyredraw                                  " redraw only when we need to, faster macros
 
@@ -67,7 +25,13 @@ set number                                      " show line number of current li
 set textwidth=100                               " set text width to 99 characters
 call matchadd('ColorColumn', '\%101v', 100)     " only show a colorcolumn when I pass the textwidth
 set fillchars+=vert:\                           " removes the | character in vertical splits
+
 highlight VertSplit gui=reverse guifg=Green     " set vertical split border colors green
+highlight Normal ctermbg=none guibg=none        " Allows you to have a transparent background to your terminal
+highlight CursorLineNr ctermbg=none guibg=none  " Add transparency to the current line number background
+highlight clear SignColumn                      " Adds transparency to the gutters column too
+set termguicolors                               " True colors
+set signcolumn=yes:2                            " always show signcolumns. 1 for gitgutter, 1 for ale linting
 
 set hidden                                      " allow to switch between buffers without saving
 set wildmenu                                    " visual autocomplete for command menu
@@ -76,7 +40,6 @@ set incsearch                                   " search as characters are enter
 set hlsearch                                    " highlight matches
 set ignorecase                                  " searches are not case sensitive
 set smartcase                                   " case sensitive if pattern has uppercase
-nnoremap <leader>, :nohlsearch<CR>              " turn off search highlight
 
 set foldenable                                  " enable folding. toggle za
 set foldlevelstart=10                           " open most folds by default
@@ -87,11 +50,4 @@ set foldmethod=indent                           " fold based on indent level
 set invlist
 set listchars=tab:▸\ ,trail:⋅,extends:❯,precedes:❮
 
-function! <SID>StripTrailingWhiteSpaces()
-    let l = line(".")
-    let c = col(".")
-    %s/\s\+$//e
-    call cursor(l, c)
-endfun
-
-autocmd BufWritePre * :call <SID>StripTrailingWhiteSpaces()
+set autochdir

@@ -1,0 +1,8 @@
+VBoxClient-all &
+xrandr -s 1920x1080
+pgrep -x sxhkd > /dev/null || sxhkd &
+feh --bg-fill $HOME/dotfiles/misc/backgrounds/* --no-fehbg &
+$HOME/.config/polybar/launch.sh
+/* picom -b */
+xcompmgr -c &
+bspwm

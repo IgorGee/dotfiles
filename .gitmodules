@@ -1,0 +1,15 @@
+[submodule "zsh/ohMyZshCustomizations/plugins/zsh-syntax-highlighting"]
+	path = zsh/ohMyZshCustomizations/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "zsh/ohMyZshCustomizations/themes/powerlevel10k"]
+	path = zsh/ohMyZshCustomizations/themes/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git
+[submodule "xdgFileStructure/programs/st"]
+	path = xdgFileStructure/programs/st
+	url = git@github.com:IgorGee/st.git
+[submodule "xdgFileStructure/.local/share/icons/la-capitaine"]
+	path = xdgFileStructure/.local/share/icons/la-capitaine
+	url = git@github.com:keeferrourke/la-capitaine-icon-theme.git
+[submodule "xdgFileStructure/programs/yay"]
+	path = xdgFileStructure/programs/yay
+	url = https://aur.archlinux.org/yay.git
