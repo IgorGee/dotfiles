@@ -12,10 +12,12 @@ rec {
   nixBinDir = "${homeDirectory}/.nix-profile/bin";
 
   dotfilesPath = "${homeDirectory}/dotfiles";
+  homeManagerModulesPath = "${absoluteXDGConfigPath}/nixpkgs/modules";
+  
   df = {
-    zsh = "${dotfilesPath}/zsh";
-    vim = "${dotfilesPath}/vim";
-    tmux = "${dotfilesPath}/tmux";
-    lf = "${dotfilesPath}/lf";
+    zsh = "${homeManagerModulesPath}/zsh";
+    vim = "${homeManagerModulesPath}/vim";
+    tmux = "${homeManagerModulesPath}/tmux";
+    lf = "${homeManagerModulesPath}/lf";
   };
 }

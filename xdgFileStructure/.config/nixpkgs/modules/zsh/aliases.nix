@@ -1,4 +1,4 @@
-with import "/home/igor/dotfiles/variables.nix";
+with import ../variables.nix;
 let
   inherit
     absoluteXDGConfigPath

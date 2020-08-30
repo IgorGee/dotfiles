@@ -1,4 +1,4 @@
-zshPath=/home/igor/dotfiles/zsh
+zshPath=$HOME/dotfiles/xdgFileStructure/.config/nixpkgs/modules/zsh
 source $zshPath/lf-icons.zsh
 source $zshPath/settings.zsh
 source $zshPath/p10k.zsh
