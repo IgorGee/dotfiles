@@ -62,12 +62,6 @@ in {
   mi = "sudo make install";
   mci = "sudo make clean install";
 
-  # XDG Fixes
-  irssi = "irssi --config=${absoluteXDGConfigPath}/irssi/config --home=${absoluteXDGDataPath}/irssi";
-
-  shellcheck = "shellcheck -e SC1090,SC2148";
-
-
   # Docker
   docker = "sudo docker";
   docker-compose = "sudo docker-compose";
@@ -77,4 +71,8 @@ in {
   # NPM
   npm = "${absoluteXDGDataPath}/npm/bin/npm";
 
+  # XDG Fixes
+  irssi = "irssi --config=${absoluteXDGConfigPath}/irssi/config --home=${absoluteXDGDataPath}/irssi";
+
+  shellcheck = "shellcheck -e SC1090,SC2148";
 }
