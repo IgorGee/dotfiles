@@ -1,8 +1,25 @@
-{pkgs}:
+{stdenv, pkgs}:
 
 with pkgs;
 [
   glibcLocales
+let
+  extract = stdenv.mkDerivation {
+    name = "extract";
+
+    src = builtins.fetchGit {
+      url = "https://github.com/xvoland/Extract";
+      rev = "dad7ff492c70f848514a516e238a9cd87e37e0d9";
+    };
+
+    installPhase = ''
+      mkdir -p $out/bin
+      echo -e "\nextract \"\$@\"" >> extract.sh
+      cp extract.sh $out/bin/extract
+      chmod +x $out/bin/extract
+    '';
+  };
+in [
   # Editor
   ctags
   vscode
@@ -18,6 +35,7 @@ with pkgs;
   ctop
   chafa
   neofetch
+  extract
 
   # Fonts
   nerdfonts # Note this has an override below
