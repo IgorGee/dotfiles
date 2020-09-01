@@ -16,6 +16,38 @@ let
       cp extract.sh $out/bin/extract
       chmod +x $out/bin/extract
     '';
+
+    meta = with stdenv.lib; {
+      description = "Bash utility to extract common file archivers";
+      longDescription = ''
+        Bash executable to extract .zip, .rar, .bz2, .gz, .tar, .tbz2, .tgz, .Z, .7z,
+        .xz, .exe, .tar.bz2, .tar.gz, .tar.xz"
+      '';
+      homepage = https://github.com/xvoland/Extract;
+      license = licenses.mit;
+    };
+  };
+
+  clustergit = stdenv.mkDerivation {
+    name = "clustergit";
+
+    src = builtins.fetchGit {
+      url = "https://github.com/mnagel/clustergit";
+      rev = "78c4562e3e47253dccc91d49f1f1bd24d18a4fc2";
+    };
+
+    installPhase = ''
+      mkdir -p $out/bin
+      cp clustergit $out/bin
+    '';
+
+    meta = with stdenv.lib; {
+      description = "Recursively run git commands in all git repos within a directory.";
+      longDescription = ''
+        Useful for doing mass checkouts, statuses, pulls, pushes, etc.
+      '';
+      homepage = https://github.com/mnagel/clustergit;
+    };
   };
 in [
   # Editor
@@ -34,6 +66,7 @@ in [
   chafa
   neofetch
   extract
+  clustergit
 
   # Fonts
   nerdfonts # Note this has an override below
