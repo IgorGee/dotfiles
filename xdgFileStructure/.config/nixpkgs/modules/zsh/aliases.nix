@@ -1,16 +1,20 @@
 with import ../variables.nix;
 let
   inherit
-    absoluteXDGConfigPath
     absoluteXDGCachePath
+    absoluteXDGConfigPath
     absoluteXDGDataPath
-    relativeXDGConfigPath
-    homeDirectory
-    dotfilesPath
     df
+    dotfilesPath
+    homeDirectory
+    homeManagerModulesPath
+    relativeXDGConfigPath
   ;
+
   xdgFileStructure = "xdgFileStructure";
-  xdgConfig = "${dotfilesPath}/${xdgFileStructure}/${relativeXDGConfigPath}";
+  dotfilesConfig = "${dotfilesPath}/${xdgFileStructure}/${relativeXDGConfigPath}";
+
+  reposDir = "${homeDirectory}/repos";
 in {
   # Misc
   szsh = "source ${absoluteXDGConfigPath}/zsh/.zshrc; source ${homeDirectory}/.zshenv";
@@ -24,25 +28,25 @@ in {
   hms = "hm switch; szsh";
 
   # Editing configs
-  eh = "hm edit";
+  eh = "vim ${homeManagerModulesPath}/personalPackages.nix";
   ea = "vim ${df.zsh}/aliases.nix";
   ev = "vim ${df.vim}/vanilla.vim";
   evb = "vim ${df.vim}/bindings.vim";
   et = "vim ${df.tmux}/tmux.conf";
   ez = "vim ${df.zsh}/post-compinit.zsh";
-  ex = "vim ${xdgConfig}/X11/xinitrc";
-  ekb = "vim ${xdgConfig}/sxhkd/sxhkdrc";
-  etwm = "vim ${xdgConfig}/bspwm/bspwmrc";
-  esbar = "vim ${xdgConfig}/polybar/config";
+  ex = "vim ${dotfilesConfig}/X11/xinitrc";
+  ekb = "vim ${dotfilesConfig}/sxhkd/sxhkdrc";
+  etwm = "vim ${dotfilesConfig}/bspwm/bspwmrc";
+  esbar = "vim ${dotfilesConfig}/polybar/config";
 
   # Common Directories
-  repos = "cd ${homeDirectory}/repos";
-  reposb = "cd ${homeDirectory}/repos/browse";
-  reposc = "cd ${homeDirectory}/repos/contribute";
-  reposp = "cd ${homeDirectory}/repos/personal";
+  repos = "cd ${reposDir}";
+  reposb = "cd ${reposDir}/browse";
+  reposc = "cd ${reposDir}/contribute";
+  reposp = "cd ${reposDir}/personal";
   dotfiles = "cd ${dotfilesPath}";
   programs = "cd ${homeDirectory}/programs";
-  xdgConfig = "cd ${xdgConfig}";
+  xdgConfig = "cd ${dotfilesConfig}";
   config = "cd ${absoluteXDGConfigPath}";
   cache = "cd ${absoluteXDGCachePath}";
   data = "cd ${absoluteXDGDataPath}";
