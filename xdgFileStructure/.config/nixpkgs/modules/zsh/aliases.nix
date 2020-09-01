@@ -53,6 +53,7 @@ in {
 
   # Git
   gfp = "git format-patch master -o patches"; # Create patch against master in patches directory
+  magit = "vim +MagitOnly";
 
   # Tmux
   tm = "tmux -2";
