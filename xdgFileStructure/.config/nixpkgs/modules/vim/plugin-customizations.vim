@@ -21,3 +21,8 @@ let g:ale_linters = {'zsh': ['shellcheck']}
 " https://github.com/dense-analysis/ale/blob/4c6f67a3d02d12a7ce2f35cc3cbe2e166ae83b72/test/command_callback/test_shellcheck_command_callback.vader#L29
 let g:ale_sh_shellcheck_dialect = 'bash'
 let g:ale_sh_shellcheck_exclusions = 'SC1090,SC2148'
+
+" Vim Magit
+" Enter insert mode when going into magit-commit mode
+autocmd User VimagitEnterCommit startinsert
+let g:magit_auto_close = 1
