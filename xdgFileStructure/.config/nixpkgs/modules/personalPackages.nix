@@ -1,8 +1,6 @@
 {stdenv, pkgs}:
 
 with pkgs;
-[
-  glibcLocales
 let
   extract = stdenv.mkDerivation {
     name = "extract";
@@ -58,11 +56,12 @@ in [
   xdg_utils # Automatically open files appropriately in browser, mpv, etc.
 
   # Misc
-  nodejs-14_x
-  shellcheck
-  docker
-  docker-compose
-  python3
-  jq
-  wireguard-tools
+  nodejs-14_x # nodejs
+  shellcheck # shell linter
+  docker # docker
+  docker-compose # docker-compose
+  python3 # python3
+  jq # required for mullvad wireguard script
+  wireguard-tools # wireguard
+  glibcLocales # Necessary to fix locale issues (related to rendering emoji in zsh)
 ]
