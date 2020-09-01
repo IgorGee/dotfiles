@@ -72,4 +72,8 @@ in {
   docker-compose = "sudo docker-compose";
   d = "docker";
   dose = "docker-compose";
+
+  # NPM
+  npm = "${absoluteXDGDataPath}/npm/bin/npm";
+
 }

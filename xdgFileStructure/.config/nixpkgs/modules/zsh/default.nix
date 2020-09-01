@@ -63,5 +63,8 @@ in {
 
     # VSCode
     VSCODE_PORTABLE="${config.xdg.dataHome}/vscode";
+
+    # NPM
+    NPM_CONFIG_USERCONFIG="${config.xdg.configHome}/npm/npmrc";
   };
 }
