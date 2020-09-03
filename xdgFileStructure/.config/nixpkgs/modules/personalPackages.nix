@@ -68,6 +68,7 @@ in [
   extract
   clustergit
   lazydocker
+  ranger
 
   # Fonts
   nerdfonts # Note this has an override below

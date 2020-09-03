@@ -54,6 +54,7 @@ in {
     # Buffer / Pane / File Management
     fzf-vim # File Search
     # coc-explorer # File Manager
+    ranger-vim
     nerdtree
     vim-fugitive # Gblame
     vimagit # Magit

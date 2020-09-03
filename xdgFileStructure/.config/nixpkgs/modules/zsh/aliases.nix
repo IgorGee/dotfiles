@@ -19,6 +19,7 @@ in {
   # Misc
   szsh = "source ${absoluteXDGConfigPath}/zsh/.zshrc; source ${homeDirectory}/.zshenv";
   cat = "bat";
+  fm = "ranger";
 
   # X
   startx = "startx ${absoluteXDGConfigPath}/X11/xinitrc";
