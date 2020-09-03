@@ -32,7 +32,7 @@ in {
   ea = "vim ${df.zsh}/aliases.nix";
   ev = "vim ${df.vim}/vanilla.vim";
   evb = "vim ${df.vim}/bindings.vim";
-  et = "vim ${df.tmux}/tmux.conf";
+  et = "vim ${df.tmux}/default.nix";
   ez = "vim ${df.zsh}/post-compinit.zsh";
   ex = "vim ${dotfilesConfig}/X11/xinitrc";
   ekb = "vim ${dotfilesConfig}/sxhkd/sxhkdrc";
@@ -56,7 +56,7 @@ in {
   magit = "vim +MagitOnly";
 
   # Tmux
-  tm = "tmux -2";
+  tm = "tmux";
 
   # C
   mi = "sudo make install";

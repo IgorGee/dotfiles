@@ -1,0 +1,13 @@
+session_name: docker-dashboard
+windows:
+- window_name: TUI
+  layout: tiled
+  panes:
+    - sudo lazydocker
+- window_name: servers
+  layout: tiled
+  shell_command_before:
+    - reposp
+    - cd common-servers
+  panes:
+    - sudo python3 ./start.py

@@ -7,6 +7,8 @@ with import ../variables.nix;
     ;
 in {
   enable = true;
+  tmuxp.enable = true;
+  terminal = "screen-256color";
   baseIndex = 1;
   sensibleOnTop = true;
   shortcut = "a";
