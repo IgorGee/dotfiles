@@ -55,7 +55,7 @@ in {
   # Git
   gfp = "git format-patch master -o patches"; # Create patch against master in patches directory
   magit = "vim +MagitOnly";
-
+  rgit = "THREAD_POOL_WORKERS=6 clustergit --recursive";
   # Tmux
   tm = "tmux";
 
