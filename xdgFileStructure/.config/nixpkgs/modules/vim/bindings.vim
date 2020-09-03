@@ -28,6 +28,9 @@ autocmd BufWritePost bspwmrc silent exec '!bspc wm -r'
 
 " Plugin Binding
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Magit
+nnoremap <Leader>m :MagitOnly<CR>
+
 " Vim Cutlass (c, cc, C, s, S, d, dd, D, x, X) will no longer attach to clipboard
 " x and X will function as the cut key
 nnoremap x d
