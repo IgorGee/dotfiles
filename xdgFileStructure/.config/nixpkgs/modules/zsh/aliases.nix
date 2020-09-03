@@ -69,9 +69,6 @@ in {
   d = "docker";
   dose = "docker-compose";
 
-  # NPM
-  npm = "${absoluteXDGDataPath}/npm/bin/npm";
-
   # XDG Fixes
   irssi = "irssi --config=${absoluteXDGConfigPath}/irssi/config --home=${absoluteXDGDataPath}/irssi";
 

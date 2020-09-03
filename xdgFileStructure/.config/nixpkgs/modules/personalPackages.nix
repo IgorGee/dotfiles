@@ -92,6 +92,7 @@ in [
 
   # Misc
   nodejs-14_x # nodejs
+  yarn # npm alternative
   shellcheck # shell linter
   docker # docker
   docker-compose # docker-compose
