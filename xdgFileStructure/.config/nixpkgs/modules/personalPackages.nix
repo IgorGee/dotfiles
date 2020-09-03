@@ -67,6 +67,7 @@ in [
   neofetch
   extract
   clustergit
+  lazydocker
 
   # Fonts
   nerdfonts # Note this has an override below
