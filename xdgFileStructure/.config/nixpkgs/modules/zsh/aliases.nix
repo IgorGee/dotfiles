@@ -69,6 +69,10 @@ in {
   d = "docker";
   dose = "docker-compose";
 
+  # Z-Lua
+  zf = "z -I"; # Z using FZF
+  zb = "z -b"; # Z backward (): dir with .git, (a): dir a, (a, b): replacing a with b
+
   # XDG Fixes
   irssi = "irssi --config=${absoluteXDGConfigPath}/irssi/config --home=${absoluteXDGDataPath}/irssi";
 

@@ -59,7 +59,7 @@ in {
     feh.enable = true;
     ssh.enable = true;
     bat.enable = true;
-    z-lua = { enable = true; options = ["fzf"]; };
+    z-lua = { enable = true; options = ["fzf"]; enableZshIntegration = true; };
     fzf.enable = true;
     mpv.enable = true;
     lf = import ./modules/lf;

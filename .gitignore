@@ -1,3 +1,4 @@
 xdgFileStructure/.local/share/fonts/**/.uuid
 xdgFileStructure/.config/fontconfig/conf.d/10-hm-fonts.conf
 xdgFileStructure/.local/share/themes/Sweet-Dark
+xdgFileStructure/.local/share/zlua/.zlua
