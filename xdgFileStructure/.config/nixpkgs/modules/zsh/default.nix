@@ -41,6 +41,9 @@ in {
     EDITOR = "vim";
     BROWSER = "brave";
 
+    # FZF
+    FZF_DEFAULT_COMMAND = "rg --files --hidden --follow --glob '!.git'"; # Using rg for speed
+
     # Something is messing with my locale :(
     LANG="en_US.UTF-8";
 
