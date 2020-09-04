@@ -41,6 +41,9 @@ in {
     EDITOR = "vim";
     BROWSER = "brave";
 
+    # Something is messing with my locale :(
+    LANG="en_US.UTF-8";
+
     # Misc XDG Spec Fixes
 
     # LESS
@@ -66,8 +69,5 @@ in {
 
     # NPM
     NPM_CONFIG_USERCONFIG="${config.xdg.configHome}/npm/npmrc";
-
-    # Something is messing with my locale :(
-    LANG="en_US.UTF-8";
   };
 }
