@@ -26,3 +26,14 @@ let g:ale_sh_shellcheck_exclusions = 'SC1090,SC2148'
 " Enter insert mode when going into magit-commit mode
 autocmd User VimagitEnterCommit startinsert
 let g:magit_auto_close = 1
+
+" Fern
+" Disable netrw.
+let g:loaded_netrw  = 1
+let g:loaded_netrwPlugin = 1
+let g:loaded_netrwSettings = 1
+let g:loaded_netrwFileHandlers = 1
+" Custom settings and mappings.
+let g:fern#disable_default_mappings = 1
+let g:fern#default_hidden = 1
+let g:fern#renderer = "nerdfont"

@@ -50,6 +50,13 @@ in {
     vim-caser # Case conversion
     ale # syntax checker for languages not covered by coc
     vim-lastplace # opens the file in the last place you were positioned
+    fern
+    fern-git-status
+    fern-mapping-git
+    nerdfont
+    fern-renderer-nerdfont
+    fern-mapping-project-top
+    fixCursorHold
 
     # Buffer / Pane / File Management
     fzf-vim # File Search

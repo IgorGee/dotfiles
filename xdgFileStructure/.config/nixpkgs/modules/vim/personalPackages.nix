@@ -17,4 +17,68 @@
       rev = "c66b8e8c2678d5446fed3a11bc02c762244608b5";
     };
   };
+
+  fern = pkgs.vimUtils.buildVimPlugin {
+    name = "fern";
+    src = builtins.fetchGit {
+      url = "https://github.com/lambdalisue/fern.vim";
+      name = "fern";
+      rev = "d3d9412d641590036e12d4d803ef922acd026c6a";
+    };
+  };
+
+  fern-git-status = pkgs.vimUtils.buildVimPlugin {
+    name = "fern-git-status";
+    src = builtins.fetchGit {
+      url = "https://github.com/lambdalisue/fern-git-status.vim";
+      name = "fern-git-status";
+      rev = "db931a581009cd76bf548b32df9a117acc507dc7";
+    };
+  };
+
+  fern-mapping-git = pkgs.vimUtils.buildVimPlugin {
+    name = "fern-mapping-git";
+    src = builtins.fetchGit {
+      url = "https://github.com/lambdalisue/fern-mapping-git.vim";
+      name = "fern-mapping-git";
+      rev = "b010b69905b79c6f67051bcc6db9acbdf81773eb";
+    };
+  };
+
+  nerdfont = pkgs.vimUtils.buildVimPlugin {
+    name = "nerdfont";
+    src = builtins.fetchGit {
+      url = "https://github.com/lambdalisue/nerdfont.vim";
+      name = "nerdfont";
+      rev = "ebc32d87a086b66d86e7cc52b73c1de8f413678a";
+    };
+  };
+
+  fern-renderer-nerdfont = pkgs.vimUtils.buildVimPlugin {
+    name = "fern-renderer-nerdfont";
+    src = builtins.fetchGit {
+      url = "https://github.com/lambdalisue/fern-renderer-nerdfont.vim";
+      name = "fern-renderer-nerdfont";
+      rev = "cc1fb9fe741665056eabf5fb9487dc0ede0955ac";
+    };
+  };
+
+  fern-mapping-project-top = pkgs.vimUtils.buildVimPlugin {
+    name = "fern-mapping-project-top";
+    src = builtins.fetchGit {
+      url = "https://github.com/lambdalisue/fern-mapping-project-top.vim";
+      name = "fern-mapping-project-top";
+      rev = "310322289c966e03fb332d8a561aa6af34099ad5";
+    };
+  };
+
+  # Necessary for neovim users who use fern
+  fixCursorHold = pkgs.vimUtils.buildVimPlugin {
+    name = "FixCursorHold";
+    src = builtins.fetchGit {
+      url = "https://github.com/antoinemadec/FixCursorHold.nvim";
+      name = "FixCursorHold";
+      rev = "d932d56b844f6ea917d3f7c04ff6871158954bc0";
+    };
+  };
 }
