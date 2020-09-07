@@ -45,7 +45,7 @@ in {
     vim-easymotion # faster file navigation
     is-vim # better find/search experience in regards to highlighting
     vim-asterisk # better * functionality
-    quick-scope # Helps target fF and tT markers
+    # quick-scope # Helps target fF and tT markers. Disabling because it freezes fern.
     vim-cutlass # Convert D to a strict deletion, without adding to clipboard. I use X for Cut.
     vim-caser # Case conversion
     ale # syntax checker for languages not covered by coc
