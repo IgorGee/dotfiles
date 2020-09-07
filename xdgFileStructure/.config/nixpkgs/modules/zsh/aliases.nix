@@ -35,6 +35,7 @@ in {
   evb = "vim ${df.vim}/bindings.vim";
   et = "vim ${df.tmux}/default.nix";
   ez = "vim ${df.zsh}/post-compinit.zsh";
+  efm = "vim ${dotfilesConfig}/ranger/rc.conf";
   ex = "vim ${dotfilesConfig}/X11/xinitrc";
   ekb = "vim ${dotfilesConfig}/sxhkd/sxhkdrc";
   etwm = "vim ${dotfilesConfig}/bspwm/bspwmrc";

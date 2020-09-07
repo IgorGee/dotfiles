@@ -69,6 +69,9 @@ in [
   clustergit
   lazydocker
   ranger
+  dragon-drop
+  ueberzug
+  sxiv
 
   # Fonts
   nerdfonts # Note this has an override below
