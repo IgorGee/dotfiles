@@ -68,7 +68,7 @@
     src = builtins.fetchGit {
       url = "https://github.com/lambdalisue/fern-mapping-project-top.vim";
       name = "fern-mapping-project-top";
-      rev = "310322289c966e03fb332d8a561aa6af34099ad5";
+      rev = "1107f0cecb5d68df9801dad8a40933a6d0779a24";
     };
   };
 

@@ -108,7 +108,7 @@ function! FernInit() abort
   nmap <buffer> v <Plug>(fern-action-open:vsplit)
   nmap <buffer><nowait> < <Plug>(fern-action-leave)
   nmap <buffer><nowait> > <Plug>(fern-action-enter)
-  nmap <buffer><nowait> ^ <Plug>(fern-action-project-top)
+  nmap <buffer><nowait> ^ <Plug>(fern-action-project-top:reveal)
 endfunction
 
 augroup FernGroup
