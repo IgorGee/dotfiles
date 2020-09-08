@@ -64,6 +64,19 @@ in {
   # Tmux
   tm = "tmux";
 
+  # Yarn
+  y = "yarn";
+  yi = "yarn init -y";
+  ya = "y add";
+  yd = "y add --dev";
+  yg = "y global add";
+  ys = "y start";
+  yul = "y upgrade-interactive --latest";
+  yt = "y test";
+  yl = "y lint";
+  yr = "y remove";
+  yys = "y && ys";
+
   # C
   mi = "sudo make install";
   mci = "sudo make clean install";
