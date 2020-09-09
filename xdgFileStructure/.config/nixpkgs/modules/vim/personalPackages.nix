@@ -25,6 +25,7 @@
       name = "fern";
       rev = "d3d9412d641590036e12d4d803ef922acd026c6a";
     };
+    # src = /home/igor/repos/contribute/fern.vim;
   };
 
   fern-git-status = pkgs.vimUtils.buildVimPlugin {
