@@ -37,3 +37,7 @@ let g:loaded_netrwFileHandlers = 1
 let g:fern#disable_default_mappings = 1
 let g:fern#default_hidden = 1
 let g:fern#renderer = "nerdfont"
+
+" Coc-json
+" Assume json files can be commented
+autocmd BufEnter *.json :setlocal filetype=jsonc

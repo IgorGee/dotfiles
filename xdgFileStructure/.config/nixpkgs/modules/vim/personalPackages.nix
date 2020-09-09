@@ -81,4 +81,14 @@
       rev = "d932d56b844f6ea917d3f7c04ff6871158954bc0";
     };
   };
+
+  # Necessary for neovim users who use fern
+  jsonc = pkgs.vimUtils.buildVimPlugin {
+    name = "jsonc.vim";
+    src = builtins.fetchGit {
+      url = "https://github.com/neoclide/jsonc.vim";
+      name = "jsonc.vim";
+      rev = "80da2a52db41b4c1ecf6f511422d3771e05622fa";
+    };
+  };
 }

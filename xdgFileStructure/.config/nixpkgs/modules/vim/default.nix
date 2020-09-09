@@ -21,8 +21,10 @@ in {
     coc-pairs
     coc-snippets
     coc-json
+    jsonc
     coc-fzf
     coc-highlight
+    coc-tsserver
     vim-snippets
     ultisnips
 
