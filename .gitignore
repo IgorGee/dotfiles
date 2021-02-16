@@ -1,4 +1,5 @@
 xdgFileStructure/.local/share/fonts/**/.uuid
 xdgFileStructure/.config/fontconfig/conf.d/10-hm-fonts.conf
+xdgFileStructure/.config/nvim/init.vim
 xdgFileStructure/.local/share/themes/Sweet-Dark
 xdgFileStructure/.local/share/zlua/.zlua
