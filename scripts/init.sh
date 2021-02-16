@@ -2,4 +2,4 @@
 
 source createHomeStructure.sh
 source prepareXdg.sh
-source manualDownloads.sh
+source installNix.sh
