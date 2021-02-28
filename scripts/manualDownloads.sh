@@ -1,8 +1,17 @@
 #!/usr/bin/env zsh
 
+XDGDataDir="$HOME/dotfiles/xdgFileStructure/.local/share/""
+themesDir="$XDGDataDir/themes"
+iconDir="$XDGDataDir/icons"
+
 curl -LO https://github.com/EliverLara/Sweet/releases/download/v1.10.5/Sweet-Dark.zip
-unzip Sweet-Dark.zip -d "$HOME/dotfiles/xdgFileStructure/.local/share/themes"
+unzip Sweet-Dark.zip -d "$themesDir"
 rm Sweet-Dark.zip
+
+extract "$HOME/dotfiles/misc/volantes_cursors.tar.gz"
+mv volantes_cursors "$iconDir"
+
+source prepareXdg.sh
 
 cd "$HOME/programs/yay" || exit
 makepkg -si
