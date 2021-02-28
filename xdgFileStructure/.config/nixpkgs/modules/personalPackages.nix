@@ -92,6 +92,7 @@ in [
   sxhkd # Simple X Hotkey Daemon
   polybar # Status bar
   xdg_utils # Automatically open files appropriately in browser, mpv, etc.
+  arandr # GUI for xrandr to help out with multi-monitor setup
 
   # Misc
   nodejs-14_x # nodejs
