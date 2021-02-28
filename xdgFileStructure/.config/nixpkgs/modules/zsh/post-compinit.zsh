@@ -42,6 +42,17 @@ function gcpr() {
   fi
 }
 
+function http2ssh() {
+  local httpUrl
+  httpUrl="$(git remote get-url origin)"
+
+  if [[ $httpUrl =~ https://github\.com/(.*)/(.*)\.git ]]; then
+    local author="${match[1]}"
+    local repoName="${match[2]}"
+    git remote set-url origin "git@github.com:$author/$repoName.git"
+  fi
+}
+
 # hook that will ls after every pwd change
 chpwd() {
   ls
