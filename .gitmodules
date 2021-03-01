@@ -4,15 +4,18 @@
 [submodule "zsh/ohMyZshCustomizations/themes/powerlevel10k"]
 	path = xdgFileStructure/.config/nixpkgs/modules/zsh/ohMyZshCustomizations/themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
+	branch = master
 [submodule "xdgFileStructure/programs/st"]
 	path = xdgFileStructure/programs/st
 	url = git@github.com:IgorGee/st.git
+	branch = master
 [submodule "xdgFileStructure/.local/share/icons/la-capitaine"]
 	path = xdgFileStructure/.local/share/icons/la-capitaine
 	url = git@github.com:keeferrourke/la-capitaine-icon-theme.git
 [submodule "xdgFileStructure/programs/yay"]
 	path = xdgFileStructure/programs/yay
 	url = https://aur.archlinux.org/yay.git
+	branch = master
 [submodule "xdgFileStructure/.config/emacs"]
 	path = xdgFileStructure/.config/emacs
 	url = https://github.com/syl20bnr/spacemacs.git
