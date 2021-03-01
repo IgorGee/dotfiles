@@ -13,3 +13,7 @@
 [submodule "xdgFileStructure/programs/yay"]
 	path = xdgFileStructure/programs/yay
 	url = https://aur.archlinux.org/yay.git
+[submodule "xdgFileStructure/.config/emacs"]
+	path = xdgFileStructure/.config/emacs
+	url = https://github.com/syl20bnr/spacemacs.git
+	branch = develop

@@ -8,6 +8,7 @@ with import ./modules/variables.nix;
     ;
 
     personalPackages = pkgs.callPackage ./modules/personalPackages.nix {};
+    spacemacsFileSetup = import ./modules/emacs/spacemacs-file-setup.nix { inherit config; };
 in {
   home = {
     # Home Manager needs a bit of information about you and the
@@ -33,6 +34,10 @@ in {
     stateVersion = "20.09";
 
     packages = personalPackages;
+    file = with spacemacsFileSetup; {
+      # Spacemacs does not yet support xdg structure
+      inherit ".spacemacs";
+    };
   };
 
   nixpkgs = {
@@ -71,5 +76,6 @@ in {
     zsh = import ./modules/zsh { inherit config lib; };
     neovim = import ./modules/vim { inherit pkgs; };
     git = import ./modules/git;
+    emacs = import ./modules/emacs;
   };
 }
