@@ -41,6 +41,9 @@ in {
   etwm = "vim ${dotfilesConfig}/bspwm/bspwmrc";
   esbar = "vim ${dotfilesConfig}/polybar/config";
 
+  # Doom
+  doom = "${absoluteXDGConfigPath}/emacs/bin/doom";
+
   # Common Directories
   repos = "cd ${reposDir}";
   reposb = "cd ${reposDir}/browse";
