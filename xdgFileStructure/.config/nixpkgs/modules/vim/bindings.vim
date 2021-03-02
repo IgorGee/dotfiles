@@ -7,7 +7,7 @@ let mapleader = "\<Space>"
 inoremap <Leader>; <C-[>m`A;<C-[>``a
 
 " quick esc during insert mode
-imap kj <Esc>
+imap fd <Esc>
 
 " Press * to search for the word under the selection and replace all
 " If first argument is blank (%s//bar/g) vim will assume the highlighted text
