@@ -99,4 +99,7 @@ in {
   irssi = "irssi --config=${absoluteXDGConfigPath}/irssi/config --home=${absoluteXDGDataPath}/irssi";
 
   shellcheck = "shellcheck -e SC1090,SC2148";
+
+  fzfvim = "vim $(fzf)";
+  fzfemacs = "emacs $(fzf)";
 }
