@@ -13,7 +13,8 @@ rec {
 
   dotfilesPath = "${homeDirectory}/dotfiles";
   homeManagerModulesPath = "${absoluteXDGConfigPath}/nixpkgs/modules";
-  
+
+  # Dotfiles
   df = {
     zsh = "${homeManagerModulesPath}/zsh";
     vim = "${homeManagerModulesPath}/vim";
