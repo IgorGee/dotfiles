@@ -29,7 +29,7 @@ background-alt = #c55
 monitor = ${env:MONITOR}
 width = 100%
 height = 32
-modules-right = cpu eth pulseaudio date
+modules-right = caffeine cpu eth pulseaudio date
 modules-left = bspwm
 ; This allows true fullscreen experience without bar covering the fullscreen window
 wm-restack = bspwm
@@ -144,6 +144,22 @@ bar-volume-fill-font = 2
 bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
+
+[module/caffeine]
+type = custom/menu
+
+label-open = 
+label-close = 
+label-open-padding = 0
+label-close-padding = 1
+label-separator = " "
+
+menu-0-0 = 
+menu-0-0-exec = caffeine -a
+menu-0-1 = 
+menu-0-1-exec = caffeine -d
+menu-0-2 = 
+menu-0-2-exec = caffeine kill
 
 ;[colors]
 ;;background = ${xrdb:color0:#222}

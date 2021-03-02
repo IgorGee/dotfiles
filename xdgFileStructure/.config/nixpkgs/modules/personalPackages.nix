@@ -104,4 +104,5 @@ in [
   jq # required for mullvad wireguard script
   wireguard-tools # wireguard
   glibcLocales # Necessary to fix locale issues (related to rendering emoji in zsh)
+  caffeine-ng
 ]
