@@ -20,6 +20,7 @@ in {
   szsh = "source ${absoluteXDGConfigPath}/zsh/.zshrc; source ${homeDirectory}/.zshenv";
   cat = "bat";
   fm = "ranger";
+  sleep = "systemctl suspend";
 
   # X
   startx = "startx ${absoluteXDGConfigPath}/X11/xinitrc";
