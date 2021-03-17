@@ -52,7 +52,19 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+(global-display-line-numbers-mode 't)
+
+;; Remove any delays when navigating commands via <LEADER> <KEY> <KEY>
+(setq which-key-idle-delay 0.1)
+
+;; Disable confirmation when quitting emacs
+(setq confirm-kill-emacs nil)
+
+;; Press fd to simulate pressing escape in insert mode
 (setq evil-escape-key-sequence "fd")
+;; Workaround to allow for multiple escape sequences
+(key-chord-mode 1)
+(key-chord-define evil-insert-state-map "FD" 'evil-escape)
 
 ;; Switching x and d.
 (define-key evil-normal-state-map "x" 'evil-delete)
