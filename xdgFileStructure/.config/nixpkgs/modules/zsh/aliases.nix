@@ -20,7 +20,6 @@ in {
   szsh = "source ${absoluteXDGConfigPath}/zsh/.zshrc; source ${homeDirectory}/.zshenv";
   cat = "bat";
   fm = "ranger";
-  sleep = "systemctl suspend";
 
   # X
   startx = "startx ${absoluteXDGConfigPath}/X11/xinitrc";
@@ -30,7 +29,8 @@ in {
   hms = "hm switch; szsh";
 
   # Editing configs
-  eh = "vim ${homeManagerModulesPath}/personalPackages.nix";
+  ehp = "vim ${homeManagerModulesPath}/personalPackages.nix";
+  eh = "vim ${nixpkgsPath}/home.nix";
   ea = "vim ${df.zsh}/aliases.nix";
   ev = "vim ${df.vim}/vanilla.vim";
   evb = "vim ${df.vim}/bindings.vim";
