@@ -82,7 +82,6 @@ in [
   brave
 
   # UI
-  dmenu # Adhoc command runner
   # picom # For transparency for st. Currently breaks when opening Brave.
   xcompmgr # Older alternative for transparency for st
   bspwm # Window Manager. There is a service for this, but it doesn't seem to work or allow for

@@ -72,5 +72,9 @@ in {
     neovim = import ./modules/vim { inherit pkgs; };
     emacs.enable = true;
     git = import ./modules/git;
+    rofi = {
+      enable = true;
+      theme = "Arc-Dark";
+    };
   };
 }
