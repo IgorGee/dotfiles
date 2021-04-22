@@ -5,9 +5,9 @@ rec {
   relativeXDGConfigPath = ".config";
   relativeXDGDataPath = ".local/share";
   relativeXDGCachePath = ".cache";
-  absoluteXDGConfigPath = "${homeDirectory}/.config";
-  absoluteXDGDataPath = "${homeDirectory}/.local/share";
-  absoluteXDGCachePath = "${homeDirectory}/.cache";
+  absoluteXDGConfigPath = "${homeDirectory}/${relativeXDGConfigPath}";
+  absoluteXDGDataPath = "${homeDirectory}/${relativeXDGDataPath}";
+  absoluteXDGCachePath = "${homeDirectory}/${relativeXDGCachePath}";
 
   nixBinDir = "${homeDirectory}/.nix-profile/bin";
 
