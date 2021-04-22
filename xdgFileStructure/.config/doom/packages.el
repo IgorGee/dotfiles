@@ -51,3 +51,4 @@
 
 (package! key-chord)
 (package! org-roam-server)
+(package! company-fuzzy)

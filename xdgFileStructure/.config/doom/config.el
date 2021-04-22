@@ -79,3 +79,11 @@
   (org-roam-server-mode)
   (smartparens-global-mode 1))
 
+(use-package! company
+  :config
+  (setq company-idle-delay 0.2
+        company-minimum-prefix-length 3
+        company-dabbrev-code-everywhere t)
+  (add-to-list 'company-backends 'company-dabbrev)
+  ;; this is from the external package "company-fuzzy". Must be called after 'company-backends are set
+  (global-company-fuzzy-mode t))
