@@ -104,5 +104,6 @@ in [
   wireguard-tools # wireguard
   glibcLocales # Necessary to fix locale issues (related to rendering emoji in zsh)
   caffeine-ng
+  cmake
   flameshot
 ]
