@@ -100,3 +100,5 @@
 (define-key! help-map
   "di"   #'doom/ediff-init-and-example
   )
+
+(set-fontset-font t 'symbol "Twitter Color Emoji")
