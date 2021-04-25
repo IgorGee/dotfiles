@@ -17,10 +17,14 @@ in {
   inherit (import pAliasesFilePath)
     mMain
     umMain
+    cdMain
     mHolding
     umHolding
+    cdHolding
     mRaw
     umRaw
+    cdRaw
+    gadn
   ;
 
   # Misc
