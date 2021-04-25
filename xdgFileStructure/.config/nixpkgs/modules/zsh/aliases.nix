@@ -9,12 +9,9 @@ let
     homeDirectory
     homeManagerModulesPath
     relativeXDGConfigPath
+    reposDir
+    xdgConfig
   ;
-
-  xdgFileStructure = "xdgFileStructure";
-  dotfilesConfig = "${dotfilesPath}/${xdgFileStructure}/${relativeXDGConfigPath}";
-
-  reposDir = "${homeDirectory}/repos";
 in {
   # Misc
   szsh = "source ${absoluteXDGConfigPath}/zsh/.zshrc; source ${homeDirectory}/.zshenv";
@@ -36,11 +33,11 @@ in {
   evb = "vim ${df.vim}/bindings.vim";
   et = "vim ${df.tmux}/default.nix";
   ez = "vim ${df.zsh}/post-compinit.zsh";
-  efm = "vim ${dotfilesConfig}/ranger/rc.conf";
-  ex = "vim ${dotfilesConfig}/X11/xinitrc";
-  ekb = "vim ${dotfilesConfig}/sxhkd/sxhkdrc";
-  etwm = "vim ${dotfilesConfig}/bspwm/bspwmrc";
-  esbar = "vim ${dotfilesConfig}/polybar/config";
+  efm = "vim ${xdgConfig}/ranger/rc.conf";
+  ex = "vim ${xdgConfig}/X11/xinitrc";
+  ekb = "vim ${xdgConfig}/sxhkd/sxhkdrc";
+  etwm = "vim ${xdgConfig}/bspwm/bspwmrc";
+  esbar = "vim ${xdgConfig}/polybar/config";
 
   # Doom
   doom = "${absoluteXDGConfigPath}/emacs/bin/doom";
@@ -52,7 +49,7 @@ in {
   reposp = "cd ${reposDir}/personal";
   dotfiles = "cd ${dotfilesPath}";
   programs = "cd ${homeDirectory}/programs";
-  xdgConfig = "cd ${dotfilesConfig}";
+  xdgConfig = "cd ${xdgConfig}";
   config = "cd ${absoluteXDGConfigPath}";
   cache = "cd ${absoluteXDGCachePath}";
   data = "cd ${absoluteXDGDataPath}";

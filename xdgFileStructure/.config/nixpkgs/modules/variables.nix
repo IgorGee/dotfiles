@@ -11,9 +11,12 @@ rec {
 
   nixBinDir = "${homeDirectory}/.nix-profile/bin";
 
+  reposDir = "${homeDirectory}/repos";
   dotfilesPath = "${homeDirectory}/dotfiles";
   nixpkgsPath = "${absoluteXDGConfigPath}/nixpkgs";
   homeManagerModulesPath = "${nixpkgsPath}/modules";
+  xdgFileStructurePath = "${dotfilesPath}/xdgFileStructure";
+  xdgConfig = "${xdgFileStructurePath}/${relativeXDGConfigPath}";
 
   # Dotfiles
   df = {
