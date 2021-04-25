@@ -106,4 +106,9 @@ in [
   caffeine-ng
   cmake
   flameshot
+
+  # Spelling/Dictionary/Thesaurus
+  aspell
+  aspellDicts.en
+  aspellDicts.en-computers
 ]
