@@ -53,7 +53,7 @@ function http2ssh() {
   fi
 }
 
-# hook that will ls after every pwd change
+# hook that will ls after every pwd change (cd ...)
 chpwd() {
   ls
 }
