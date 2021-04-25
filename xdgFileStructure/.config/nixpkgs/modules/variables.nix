@@ -13,6 +13,8 @@ rec {
 
   reposDir = "${homeDirectory}/repos";
   dotfilesPath = "${homeDirectory}/dotfiles";
+  pDotfilesPath = "${homeDirectory}/repos/personal/pdotfiles";
+  pAliasesPath = "${pDotfilesPath}/pAliases.nix";
   nixpkgsPath = "${absoluteXDGConfigPath}/nixpkgs";
   homeManagerModulesPath = "${nixpkgsPath}/modules";
   xdgFileStructurePath = "${dotfilesPath}/xdgFileStructure";

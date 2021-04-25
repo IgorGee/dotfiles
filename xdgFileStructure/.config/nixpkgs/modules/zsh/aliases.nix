@@ -6,6 +6,7 @@ let
     absoluteXDGDataPath
     df
     dotfilesPath
+    pAliasesPath
     homeDirectory
     homeManagerModulesPath
     relativeXDGConfigPath
@@ -13,6 +14,16 @@ let
     xdgConfig
   ;
 in {
+  # pAliases
+  inherit (import pAliasesPath)
+    mMain
+    umMain
+    mHolding
+    umHolding
+    mRaw
+    umRaw
+  ;
+
   # Misc
   szsh = "source ${absoluteXDGConfigPath}/zsh/.zshrc; source ${homeDirectory}/.zshenv";
   cat = "bat";
