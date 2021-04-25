@@ -87,3 +87,13 @@
   (add-to-list 'company-backends 'company-dabbrev)
   ;; this is from the external package "company-fuzzy". Must be called after 'company-backends are set
   (global-company-fuzzy-mode t))
+
+(defun doom/ediff-init-and-example ()
+  "ediff the current `init.el' with the example in doom-emacs-dir"
+  (interactive)
+  (ediff-files (concat doom-private-dir "init.el")
+               (concat doom-emacs-dir "init.example.el")))
+
+(define-key! help-map
+  "di"   #'doom/ediff-init-and-example
+  )
