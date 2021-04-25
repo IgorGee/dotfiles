@@ -1,7 +1,7 @@
-zshPath=$HOME/dotfiles/xdgFileStructure/.config/nixpkgs/modules/zsh
-source $zshPath/lf-icons.zsh
-source $zshPath/settings.zsh
-source $zshPath/p10k.zsh
+zshDirPath=$HOME/dotfiles/xdgFileStructure/.config/nixpkgs/modules/zsh
+source $zshDirPath/lf-icons.zsh
+source $zshDirPath/settings.zsh
+source $zshDirPath/p10k.zsh
 
 [[ -f ~/.nix-profile/etc/profile.d/nix.sh ]] && source ~/.nix-profile/etc/profile.d/nix.sh
 

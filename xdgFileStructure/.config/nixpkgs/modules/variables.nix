@@ -2,29 +2,29 @@ rec {
   username = "igor";
   homeDirectory = "/home/${username}";
 
-  relativeXDGConfigPath = ".config";
-  relativeXDGDataPath = ".local/share";
-  relativeXDGCachePath = ".cache";
-  absoluteXDGConfigPath = "${homeDirectory}/${relativeXDGConfigPath}";
-  absoluteXDGDataPath = "${homeDirectory}/${relativeXDGDataPath}";
-  absoluteXDGCachePath = "${homeDirectory}/${relativeXDGCachePath}";
+  relativeXDGConfigDirPath= ".config";
+  relativeXDGDataDirPath= ".local/share";
+  relativeXDGCacheDirPath= ".cache";
+  absoluteXDGConfigDirPath= "${homeDirectory}/${relativeXDGConfigDirPath}";
+  absoluteXDGDataDirPath= "${homeDirectory}/${relativeXDGDataDirPath}";
+  absoluteXDGCacheDirPath= "${homeDirectory}/${relativeXDGCacheDirPath}";
 
   nixBinDir = "${homeDirectory}/.nix-profile/bin";
 
-  reposDir = "${homeDirectory}/repos";
-  dotfilesPath = "${homeDirectory}/dotfiles";
-  pDotfilesPath = "${homeDirectory}/repos/personal/pdotfiles";
-  pAliasesPath = "${pDotfilesPath}/pAliases.nix";
-  nixpkgsPath = "${absoluteXDGConfigPath}/nixpkgs";
-  homeManagerModulesPath = "${nixpkgsPath}/modules";
-  xdgFileStructurePath = "${dotfilesPath}/xdgFileStructure";
-  xdgConfig = "${xdgFileStructurePath}/${relativeXDGConfigPath}";
+  reposDirPath = "${homeDirectory}/repos";
+  dotfilesDirPath= "${homeDirectory}/dotfiles";
+  pDotfilesDirPath= "${homeDirectory}/repos/personal/pdotfiles";
+  pAliasesFilePath= "${pDotfilesDirPath}/pAliases.nix";
+  nixpkgsDirPath= "${absoluteXDGConfigDirPath}/nixpkgs";
+  homeManagerModulesDirPath= "${nixpkgsDirPath}/modules";
+  xdgFileStructureDirPath= "${dotfilesDirPath}/xdgFileStructure";
+  xdgConfigDirPath = "${xdgFileStructureDirPath}/${relativeXDGConfigDirPath}";
 
   # Dotfiles
   df = {
-    zsh = "${homeManagerModulesPath}/zsh";
-    vim = "${homeManagerModulesPath}/vim";
-    tmux = "${homeManagerModulesPath}/tmux";
-    lf = "${homeManagerModulesPath}/lf";
+    zsh = "${homeManagerModulesDirPath}/zsh";
+    vim = "${homeManagerModulesDirPath}/vim";
+    tmux = "${homeManagerModulesDirPath}/tmux";
+    lf = "${homeManagerModulesDirPath}/lf";
   };
 }

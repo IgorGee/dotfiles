@@ -3,13 +3,13 @@
 with import ../variables.nix;
   let
     inherit
-      relativeXDGConfigPath
+      relativeXDGConfigDirPath
       df
     ;
 in {
   enable = true;
   enableAutosuggestions = true;
-  dotDir = "${relativeXDGConfigPath}/zsh";
+  dotDir = "${relativeXDGConfigDirPath}/zsh";
   history = {
     path = "${config.xdg.dataHome}/zsh/.zsh_history";
   };
