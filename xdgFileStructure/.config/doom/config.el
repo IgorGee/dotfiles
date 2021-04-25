@@ -70,6 +70,9 @@
 (define-key evil-normal-state-map "x" 'evil-delete)
 (define-key evil-normal-state-map "X" 'evil-delete-line)
 
+;; PConfig
+(load! "~/repos/personal/pdotfiles/pconfig.el")
+
 ;; org-roam-server
 (setq org-roam-server-port 7048)
 (require 'org-roam-protocol)
