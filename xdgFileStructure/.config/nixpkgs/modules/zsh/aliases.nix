@@ -15,6 +15,7 @@ let
 in {
   # pAliases
   inherit (import pAliasesFilePath)
+    sshN
     mMain
     umMain
     cdMain
@@ -43,6 +44,7 @@ in {
   ehp = "vim ${homeManagerModulesDirPath}/personalPackages.nix";
   eh = "vim ${nixpkgsDirPath}/home.nix";
   ea = "vim ${df.zsh}/aliases.nix";
+  eap = "vim ${pAliasesFilePath}";
   ev = "vim ${df.vim}/vanilla.vim";
   evb = "vim ${df.vim}/bindings.vim";
   et = "vim ${df.tmux}/default.nix";
@@ -98,9 +100,12 @@ in {
 
   # Docker
   docker = "sudo docker";
-  docker-compose = "sudo docker-compose";
   d = "docker";
+  drun = "d exec -t";
+  docker-compose = "sudo docker-compose";
   dose = "docker-compose";
+  doseu = "docker-compose up -d";
+  dosed = "docker-compose down";
 
   # Z-Lua
   zf = "z -I"; # Z using FZF
