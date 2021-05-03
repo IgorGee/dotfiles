@@ -5,6 +5,11 @@ source $zshDirPath/p10k.zsh
 
 [[ -f ~/.nix-profile/etc/profile.d/nix.sh ]] && source ~/.nix-profile/etc/profile.d/nix.sh
 
+function daemon() {
+  local command=$1
+  $command > /dev/null 2>&1 &
+}
+
 function gclo() {
   cloneFullUrl() {
     local fullUrl=$1
@@ -51,6 +56,26 @@ function http2ssh() {
     local repoName="${match[2]}"
     git remote set-url origin "git@github.com:$author/$repoName.git"
   fi
+}
+
+function dcli() {
+  local containerName
+  containerName="$1"
+  docker exec -it "$containerName" /bin/bash
+}
+
+# Backing up and Restoring Docker Volumes
+# https://stackoverflow.com/questions/21597463/how-to-port-data-only-volumes-from-one-host-to-another/23778599
+# backup files from a docker volume into /tmp/backup.tar.gz
+function docker-volume-backup-compressed() {
+  docker run --rm -v /tmp:/backup --volumes-from "$1" debian:jessie tar -czvf /backup/backup.tar.gz "${@:2}"
+}
+
+# restore files from /tmp/backup.tar.gz into a docker volume
+function docker-volume-restore-compressed() {
+  docker run --rm -v /tmp:/backup --volumes-from "$1" debian:jessie tar -xzvf /backup/backup.tar.gz "${@:2}"
+  echo "Double checking files..."
+  docker run --rm -v /tmp:/backup --volumes-from "$1" debian:jessie ls -lh "${@:2}"
 }
 
 # hook that will ls after every pwd change (cd ...)

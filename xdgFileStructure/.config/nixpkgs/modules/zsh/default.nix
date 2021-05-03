@@ -86,5 +86,9 @@ in {
 
     # NPM
     NPM_CONFIG_USERCONFIG="${config.xdg.configHome}/npm/npmrc";
+
+    # Datagrip: fixes blank gray screen on startup
+    # https://stackoverflow.com/questions/33424736/intellij-idea-14-on-arch-linux-opening-to-grey-screen
+    _JAVA_AWT_WM_NONREPARENTING=1;
   };
 }
