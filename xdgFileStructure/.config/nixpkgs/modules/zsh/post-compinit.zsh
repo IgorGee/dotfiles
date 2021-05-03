@@ -5,11 +5,6 @@ source $zshDirPath/p10k.zsh
 
 [[ -f ~/.nix-profile/etc/profile.d/nix.sh ]] && source ~/.nix-profile/etc/profile.d/nix.sh
 
-function daemon() {
-  local command=$1
-  $command > /dev/null 2>&1 &
-}
-
 function gclo() {
   cloneFullUrl() {
     local fullUrl=$1

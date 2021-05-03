@@ -85,6 +85,7 @@ in [
   # picom # For transparency for st. Currently breaks when opening Brave.
   xcompmgr # Older alternative for transparency for st
   bspwm # Window Manager. There is a service for this, but it doesn't seem to work or allow for
+  wmname # Tool that helps fix broken applications (Datagrip showing up with gray screen only)
   # restarting of  settings. Thinking about it more, I should let home-manager do what it does
   # best, which is manage packages. For settings, it's probably better for me to manually place
   # those via stow. This lets me use proper DSL for the tool as well.
