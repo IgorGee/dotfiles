@@ -51,7 +51,6 @@ let
   };
 in [
   # Editor
-  ctags
   vscode
 
   # CLI
@@ -115,4 +114,9 @@ in [
 
   dbmate
   jetbrains.datagrip
+  postgresql_jdbc
+  haskellPackages.network-manager-tui
+
+  openvpn
+  xorg.xf86inputsynaptics
 ]

@@ -68,9 +68,6 @@ in {
     vim-fugitive # Gblame
     vimagit # Magit
 
-    # Ctags
-    vim-gutentags
-
     # Should be in UI but it requested to be the last one
     vim-devicons
   ];
