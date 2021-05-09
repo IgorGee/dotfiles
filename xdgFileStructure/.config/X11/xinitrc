@@ -1,6 +1,7 @@
 VBoxClient-all &
-/* xrandr -s 1920x1080 */
-$HOME/dotfiles/scripts/3-mon-xps.sh
+
+$HOME/dotfiles/scripts/xrandr-xps.sh
+
 /* Replace the default X cursor */
 xsetroot -cursor_name left_ptr
 pgrep -x sxhkd > /dev/null || sxhkd &
