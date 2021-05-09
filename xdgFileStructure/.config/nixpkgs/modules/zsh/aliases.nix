@@ -1,5 +1,7 @@
 with import ../variables.nix;
 let
+  editor = "emacsclient -n";
+
   inherit
     absoluteXDGCacheDirPath
     absoluteXDGConfigDirPath
@@ -41,19 +43,19 @@ in {
   hms = "hm switch; szsh";
 
   # Editing configs
-  ehp = "vim ${homeManagerModulesDirPath}/personalPackages.nix";
-  eh = "vim ${nixpkgsDirPath}/home.nix";
-  ea = "vim ${df.zsh}/aliases.nix";
-  eap = "vim ${pAliasesFilePath}";
-  ev = "vim ${df.vim}/vanilla.vim";
-  evb = "vim ${df.vim}/bindings.vim";
-  et = "vim ${df.tmux}/default.nix";
-  ez = "vim ${df.zsh}/post-compinit.zsh";
-  efm = "vim ${xdgConfigDirPath}/ranger/rc.conf";
-  ex = "vim ${xdgConfigDirPath}/X11/xinitrc";
-  ekb = "vim ${xdgConfigDirPath}/sxhkd/sxhkdrc";
-  etwm = "vim ${xdgConfigDirPath}/bspwm/bspwmrc";
-  esbar = "vim ${xdgConfigDirPath}/polybar/config";
+  ehp = "${editor} ${homeManagerModulesDirPath}/personalPackages.nix";
+  eh = "${editor} ${nixpkgsDirPath}/home.nix";
+  ea = "${editor} ${df.zsh}/aliases.nix";
+  eap = "${editor} ${pAliasesFilePath}";
+  ev = "${editor} ${df.vim}/vanilla.vim";
+  evb = "${editor} ${df.vim}/bindings.vim";
+  et = "${editor} ${df.tmux}/default.nix";
+  ez = "${editor} ${df.zsh}/post-compinit.zsh";
+  efm = "${editor} ${xdgConfigDirPath}/ranger/rc.conf";
+  ex = "${editor} ${xdgConfigDirPath}/X11/xinitrc";
+  ekb = "${editor} ${xdgConfigDirPath}/sxhkd/sxhkdrc";
+  etwm = "${editor} ${xdgConfigDirPath}/bspwm/bspwmrc";
+  esbar = "${editor} ${xdgConfigDirPath}/polybar/config";
 
   # Doom
   doom = "${absoluteXDGConfigDirPath}/emacs/bin/doom";
