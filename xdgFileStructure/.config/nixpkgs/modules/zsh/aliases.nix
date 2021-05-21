@@ -101,7 +101,6 @@ in {
   mci = "sudo make clean install";
 
   # Docker
-  docker = "sudo docker";
   d = "docker";
   drun = "d exec -t";
   docker-compose = "sudo docker-compose";
