@@ -47,6 +47,7 @@ in {
   ngc = "nix-collect-garbage -d";
 
   # Editing configs
+  edit = "${editor}";
   ehp = "${editor} ${homeManagerModulesDirPath}/personalPackages.nix";
   eh = "${editor} ${nixpkgsDirPath}/home.nix";
   ea = "${editor} ${df.zsh}/aliases.nix";
