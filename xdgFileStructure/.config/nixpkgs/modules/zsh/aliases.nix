@@ -42,6 +42,9 @@ in {
   hm = "home-manager";
   hms = "hm switch; szsh";
 
+  # Nix
+  ngc = "nix-collect-garbage -d";
+
   # Editing configs
   ehp = "${editor} ${homeManagerModulesDirPath}/personalPackages.nix";
   eh = "${editor} ${nixpkgsDirPath}/home.nix";
