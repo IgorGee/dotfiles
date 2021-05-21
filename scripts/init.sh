@@ -2,6 +2,6 @@
 
 source createHomeStructure.sh
 source prepareXdg.sh
-source setupOrgConfs.sh
+source setupXOrgConfs.sh
 source org-protocol.sh
 source installNix.sh
