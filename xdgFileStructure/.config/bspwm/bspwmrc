@@ -20,10 +20,5 @@ bspc config gapless_monocle      true
 # Fixes applications that start with only gray screen (Datagrip)
 wmname LG3D
 
-bspc rule -a Emacs state=tiled
-bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Emacs state=tiled desktop='^1'
 bspc rule -a Code desktop='^2'
-bspc rule -a brave desktop='^3'
-bspc rule -a mplayer2 state=floating
-bspc rule -a Kupfer.py focus=on
-bspc rule -a Screenkey manage=off
