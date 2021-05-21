@@ -110,6 +110,7 @@ in [
   caffeine-ng
   cmake
   flameshot
+  xdotool # KB/Mouse Automation
 
   # Spelling/Dictionary/Thesaurus
   aspell
