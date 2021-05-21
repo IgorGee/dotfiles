@@ -71,6 +71,8 @@ in [
   dragon-drop
   ueberzug
   sxiv
+  navi
+  cht-sh
 
   # Fonts
   nerdfonts # Note this has an override below
@@ -92,6 +94,8 @@ in [
   polybar # Status bar
   xdg_utils # Automatically open files appropriately in browser, mpv, etc.
   arandr # GUI for xrandr to help out with multi-monitor setup
+  xfce.thunar # GUI File Manager
+  mtpfs # Automatically connect android devices and become viewable by GUI File Managers
 
   # Misc
   nodejs-14_x # nodejs

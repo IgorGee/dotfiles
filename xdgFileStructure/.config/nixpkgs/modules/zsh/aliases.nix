@@ -34,6 +34,7 @@ in {
   szsh = "source ${absoluteXDGConfigDirPath}/zsh/.zshrc; source ${homeDirectory}/.zshenv";
   cat = "bat";
   fm = "ranger";
+  cs = "cht.sh";
 
   # X
   startx = "startx ${absoluteXDGConfigDirPath}/X11/xinitrc";
