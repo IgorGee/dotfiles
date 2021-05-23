@@ -111,6 +111,8 @@ in [
   cmake
   flameshot
   xdotool # KB/Mouse Automation
+  libnotify
+  dunst
 
   # Spelling/Dictionary/Thesaurus
   aspell

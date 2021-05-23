@@ -61,6 +61,7 @@ in {
   ekb = "${editor} ${xdgConfigDirPath}/sxhkd/sxhkdrc";
   etwm = "${editor} ${xdgConfigDirPath}/bspwm/bspwmrc";
   esbar = "${editor} ${xdgConfigDirPath}/polybar/config";
+  en = "${editor} ${xdgConfigDirPath}/dunst/dunstrc";
 
   # Doom
   doom = "${absoluteXDGConfigDirPath}/emacs/bin/doom";
