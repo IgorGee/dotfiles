@@ -62,6 +62,7 @@ in {
   etwm = "${editor} ${xdgConfigDirPath}/bspwm/bspwmrc";
   esbar = "${editor} ${xdgConfigDirPath}/polybar/config";
   en = "${editor} ${xdgConfigDirPath}/dunst/dunstrc";
+  es = "${editor} ${xdgConfigDirPath}/espanso/default.yml";
 
   # Doom
   doom = "${absoluteXDGConfigDirPath}/emacs/bin/doom";

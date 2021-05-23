@@ -11,6 +11,9 @@ sxhkdCommand="sxhkd -c $sxhkdFiles"
 pgrep -x $sxhkdCommand > /dev/null || $sxhkdCommand &
 
 dunst &
+
+espanso daemon &
+
 feh --bg-fill $HOME/dotfiles/misc/backgrounds/* --no-fehbg &
 $HOME/.config/polybar/launch.sh
 xcompmgr -c &

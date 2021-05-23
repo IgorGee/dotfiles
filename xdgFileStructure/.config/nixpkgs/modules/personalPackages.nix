@@ -111,7 +111,9 @@ in [
   cmake
   flameshot
   xdotool # KB/Mouse Automation
+  espanso
   libnotify
+  xclip
   dunst
 
   # Spelling/Dictionary/Thesaurus
