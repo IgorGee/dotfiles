@@ -90,18 +90,30 @@ in {
   # Tmux
   tm = "tmux";
 
-  # Yarn
-  y = "yarn";
-  yi = "yarn init -y";
-  ya = "y add";
-  yd = "y add --dev";
-  yg = "y global add";
-  ys = "y start";
-  yul = "y upgrade-interactive --latest";
-  yt = "y test";
-  yl = "y lint";
-  yr = "y remove";
-  yys = "y && ys";
+  # Node
+  ni = "yarn";
+  nr = "yarn run";
+  ninit = "yarn init -y";
+  nda = "yarn add";
+  ndad = "yarn add --dev";
+  # https://github.com/yarnpkg/yarn/issues/5056
+  ndag = "npm_config_registry=http://localhost:4873 yarn global add";
+  ndr = "yarn remove";
+  ndrg = "yarn global remove";
+  ndu = "yarn upgrade-interactive --latest";
+  nrs = "yarn start";
+  nrd = "yarn dev";
+  nrt = "yarn test";
+  nrl = "yarn lint";
+  nre = "yarn runExecutable";
+  np = "yarn publish";
+  nb = "yarn build";
+  nw = "yarn watch";
+  nv = "yarn version --no-git-tag-version";
+  nvM = "nv --major";
+  nvm = "nv --minor";
+  nvp = "nv --patch";
+  nreset = "rm -rf node_modules yarn.lock && ni";
 
   # C
   mi = "sudo make install";
