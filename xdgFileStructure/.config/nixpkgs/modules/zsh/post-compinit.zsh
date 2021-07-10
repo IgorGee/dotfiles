@@ -5,6 +5,8 @@ source $zshDirPath/p10k.zsh
 
 [[ -f ~/.nix-profile/etc/profile.d/nix.sh ]] && source ~/.nix-profile/etc/profile.d/nix.sh
 
+export PATH="$PATH:/home/igor/.local/share/npm/bin"
+
 function gclo() {
   cloneFullUrl() {
     local fullUrl=$1
