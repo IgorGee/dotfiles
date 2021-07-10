@@ -65,11 +65,15 @@ function dcli() {
 # https://stackoverflow.com/questions/21597463/how-to-port-data-only-volumes-from-one-host-to-another/23778599
 # backup files from a docker volume into /tmp/backup.tar.gz
 function docker-volume-backup-compressed() {
+  # Note: $2 is the directory within the container of $1 that you wish to backup.
+  # If there are multiple directories you want to back up, you need to run this command for each of them
   docker run --rm -v /tmp:/backup --volumes-from "$1" debian:jessie tar -czvf /backup/backup.tar.gz "${@:2}"
 }
 
 # restore files from /tmp/backup.tar.gz into a docker volume
 function docker-volume-restore-compressed() {
+  # Note: For $2, you should remove leading slashes
+  # Also, the backup.tar.gz file should be in your /tmp
   docker run --rm -v /tmp:/backup --volumes-from "$1" debian:jessie tar -xzvf /backup/backup.tar.gz "${@:2}"
   echo "Double checking files..."
   docker run --rm -v /tmp:/backup --volumes-from "$1" debian:jessie ls -lh "${@:2}"
