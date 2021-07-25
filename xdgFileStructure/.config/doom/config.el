@@ -98,3 +98,8 @@
   )
 
 (set-fontset-font t 'symbol "Twitter Color Emoji")
+
+(setq flyspell-mode nil)
+
+(setq treemacs-git-mode 'deferred)
+(setq doom-themes-treemacs-theme "doom-colors")
