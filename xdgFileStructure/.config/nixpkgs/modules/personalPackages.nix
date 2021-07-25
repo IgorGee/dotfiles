@@ -124,11 +124,14 @@ in [
   aspellDicts.en
   aspellDicts.en-computers
 
-  dbmate
-  jetbrains.datagrip
-  postgresql_jdbc
-  haskellPackages.network-manager-tui
+  dbmate # Database migration handler
+  postgresql_13 # So that I can use pg_dump
+  jetbrains.datagrip # Database GUI
+  postgresql_jdbc # Needed by database GUIs
 
-  openvpn
-  xorg.xf86inputsynaptics
+  haskellPackages.network-manager-tui # TUI for network manager
+  openvpn # oVPN connections
+
+  xorg.xf86inputsynaptics # Needed for multi-touch and tap on trackpad for laptop
+  jre8
 ]
