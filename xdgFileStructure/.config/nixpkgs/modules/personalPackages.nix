@@ -1,4 +1,4 @@
-{stdenv, pkgs}:
+{stdenv, pkgs, lib}:
 
 with pkgs;
 let
@@ -17,7 +17,7 @@ let
       chmod +x $out/bin/extract
     '';
 
-    meta = with stdenv.lib; {
+    meta = with lib; {
       description = "Bash utility to extract common file archivers";
       longDescription = ''
         Bash executable to extract .zip, .rar, .bz2, .gz, .tar, .tbz2, .tgz, .Z, .7z,
@@ -41,7 +41,7 @@ let
       cp clustergit $out/bin
     '';
 
-    meta = with stdenv.lib; {
+    meta = with lib; {
       description = "Recursively run git commands in all git repos within a directory.";
       longDescription = ''
         Useful for doing mass checkouts, statuses, pulls, pushes, etc.
