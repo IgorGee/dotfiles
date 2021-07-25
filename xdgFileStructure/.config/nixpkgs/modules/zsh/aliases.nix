@@ -45,6 +45,7 @@ in {
 
   # Nix
   ngc = "nix-collect-garbage -d";
+  ncu = "nix-channel --update";
 
   # Editing configs
   edit = "${editor}";
