@@ -78,6 +78,8 @@ in [
   nerdfonts # Note this has an override below
   twitter-color-emoji
   symbola
+  noto-fonts-cjk # Chinese, Japanese, Korean fonts
+  noto-fonts # Residual fonts to fill in "tofu" boxes
 
   # Browser
   brave
