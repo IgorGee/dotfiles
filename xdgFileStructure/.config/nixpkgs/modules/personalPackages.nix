@@ -110,6 +110,7 @@ in [
   caffeine-ng
   cmake
   flameshot
+  peek
   xdotool # KB/Mouse Automation
   espanso
   libnotify

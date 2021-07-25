@@ -22,3 +22,4 @@ wmname LG3D
 
 bspc rule -a Emacs state=tiled desktop='^1'
 bspc rule -a Code desktop='^2'
+bspc rule -a Peek state=floating
