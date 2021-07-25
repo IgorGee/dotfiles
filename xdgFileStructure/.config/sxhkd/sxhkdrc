@@ -19,4 +19,4 @@ super + @space
 #
 
 Print
-  flameshot gui
+  sudo flameshot gui
