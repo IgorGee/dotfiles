@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-sudo echo $(which zsh) >> /etc/shells
+echo $(which zsh) | sudo tee -a /etc/shells
 sudo chsh -s $(which zsh)
 chsh -s $(which zsh)
-vim $HOME/.ssh/id_rsa
