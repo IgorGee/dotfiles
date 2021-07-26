@@ -13,4 +13,7 @@ with pkgs;
   ranger
   navi
   cht-sh
+
+  # Misc
+  nodejs-16_x # nodejs
 ]

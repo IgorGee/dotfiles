@@ -90,7 +90,6 @@ in [
   mtpfs # Automatically connect android devices and become viewable by GUI File Managers
 
   # Misc
-  nodejs-14_x # nodejs
   yarn # npm alternative
   shellcheck # shell linter
   docker # docker
