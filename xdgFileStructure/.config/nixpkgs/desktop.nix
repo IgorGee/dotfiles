@@ -1,9 +1,5 @@
 { config, pkgs, lib, ... }:
-let 
-  packagesDesktop = pkgs.callPackage ./modules/packagesDesktop.nix {};
-  packagesCommon = pkgs.callPackage ./modules/packagesCommon.nix {};
-in {
-  imports = [ ./common.nix ];
+{
   home = {
     # These variables solve the issue of emojis not rendering in nix's zsh
     sessionVariables = {
@@ -12,7 +8,9 @@ in {
       LOCALE_ARCHIVE = "/usr/bin/locale";
     };
 
-    packages = packagesCommon ++ packagesDesktop;
+    # Seems like the imports = [...] syntax in home.nix automerges program configs, INCLUDING handling recursion and array concats.
+    # No need to merge in common
+    packages = pkgs.callPackage ./modules/packagesDesktop.nix {};
   };
 
   nixpkgs = {

@@ -22,6 +22,8 @@ in {
     # the Home Manager release notes for a list of state version
     # changes in each release.
     stateVersion = "20.09";
+
+    packages = pkgs.callPackage ./modules/packagesCommon.nix {};
   };
 
   xdg.enable = true;
