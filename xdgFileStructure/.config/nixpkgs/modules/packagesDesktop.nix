@@ -54,25 +54,15 @@ in [
   vscode
 
   # CLI
-  ripgrep
-  ripgrep-all
-  stow
-  tree
   unzip
-  pistol
-  gtop
-  ctop
   chafa
   neofetch
   extract
   clustergit
   lazydocker
-  ranger
   dragon-drop
   ueberzug
   sxiv
-  navi
-  cht-sh
 
   # Fonts
   nerdfonts # Note this has an override below

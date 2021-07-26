@@ -1,4 +1,4 @@
-with import ../variables.nix;
+with import ../variablesCommon.nix;
   let
     inherit
       nixBinDir

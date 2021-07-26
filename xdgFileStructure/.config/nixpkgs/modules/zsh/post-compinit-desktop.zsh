@@ -1,36 +1,7 @@
 zshDirPath=$HOME/dotfiles/xdgFileStructure/.config/nixpkgs/modules/zsh
-source $zshDirPath/lf-icons.zsh
-source $zshDirPath/settings.zsh
-source $zshDirPath/p10k.zsh
-
-[[ -f ~/.nix-profile/etc/profile.d/nix.sh ]] && source ~/.nix-profile/etc/profile.d/nix.sh
+source $zshDirPath/post-compinit-common.zsh
 
 export PATH="$PATH:/home/igor/.local/share/npm/bin"
-
-function gclo() {
-  cloneFullUrl() {
-    local fullUrl=$1
-    local repoName=$2
-
-    if git clone "$fullUrl"; then
-      cd "$repoName" || exit
-    fi
-  }
-
-  cloneShorthand() {
-    local author=$1
-    local repoName=$2
-    local fullUrl="git@github.com:$author/$repoName.git"
-
-    git clone "$fullUrl" && cd "$repoName" || return
-  }
-
-  if [[ $1 =~ git@github\.com:(.*)/(.*)\.git ]]; then
-    cloneFullUrl "$1" "${BASH_REMATCH[2]}"
-  else
-    cloneShorthand "$1" "$2"
-  fi
-}
 
 # gcpr author repo-name
 # gcpr author repo-name FETCH_HEAD~3..FETCH_HEAD
@@ -77,9 +48,4 @@ function docker-volume-restore-compressed() {
   docker run --rm -v /tmp:/backup --volumes-from "$1" debian:jessie tar -xzvf /backup/backup.tar.gz "${@:2}"
   echo "Double checking files..."
   docker run --rm -v /tmp:/backup --volumes-from "$1" debian:jessie ls -lh "${@:2}"
-}
-
-# hook that will ls after every pwd change (cd ...)
-chpwd() {
-  ls
 }
