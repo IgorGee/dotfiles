@@ -31,6 +31,7 @@ in {
   edit = "${editor}";
   epc = "${editor} ${homeManagerModulesDirPath}/packagesCommon.nix";
   epd = "${editor} ${homeManagerModulesDirPath}/packagesDesktop.nix";
+  eps = "${editor} ${homeManagerModulesDirPath}/packagesServer.nix";
   eh = "${editor} ${nixpkgsDirPath}/home.nix";
   eac = "${editor} ${df.zsh}/aliasesCommon.nix";
   ead = "${editor} ${df.zsh}/aliasesCommon.nix";
@@ -47,7 +48,6 @@ in {
   config = "cd ${absoluteXDGConfigDirPath}";
   cache = "cd ${absoluteXDGCacheDirPath}";
   data = "cd ${absoluteXDGDataDirPath}";
-
 
   # Tmux
   tm = "tmux";
