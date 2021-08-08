@@ -1,8 +1,7 @@
-with import ../variablesDesktop.nix;
 let
   editor = "emacsclient -n";
 
-  inherit
+  inherit (import ../variablesDesktop.nix)
     absoluteXDGCacheDirPath
     absoluteXDGConfigDirPath
     absoluteXDGDataDirPath

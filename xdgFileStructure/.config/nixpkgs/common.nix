@@ -1,11 +1,10 @@
 { config, pkgs, lib, ... }:
 
-with import ./modules/variablesCommon.nix;
-  let
-    inherit
-      username
-      homeDirectory
-    ;
+let
+  inherit (import ./modules/variablesCommon.nix)
+    username
+    homeDirectory
+  ;
 in {
   home = {
     # Home Manager needs a bit of information about you and the

@@ -1,13 +1,12 @@
 { pkgs }:
 
-with import ../variablesCommon.nix;
-  let
-    inherit
-      df
-    ;
+let
+  inherit (import ../variablesCommon.nix)
+    df
+  ;
 
-    # personalVimPackages = import ./personalPackages.nix {inherit pkgs;};
-    personalVimPackages = pkgs.callPackage ./personalPackages.nix {};
+  # personalVimPackages = import ./personalPackages.nix {inherit pkgs;};
+  personalVimPackages = pkgs.callPackage ./personalPackages.nix {};
 in {
   enable = true;
   vimAlias = true;

@@ -1,8 +1,7 @@
-with import ../variablesCommon.nix;
-  let
-    inherit
-      nixBinDir
-    ;
+let
+  inherit (import ../variablesCommon.nix)
+    nixBinDir
+  ;
 in {
   enable = true;
   settings = {

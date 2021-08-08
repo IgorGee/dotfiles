@@ -1,10 +1,9 @@
 { config, lib }:
 
-with import ../variablesCommon.nix;
-  let
-    inherit
-      df
-    ;
+let
+  inherit (import ../variablesCommon.nix)
+    df
+  ;
 in {
   initExtra = builtins.readFile "${df.zsh}/post-compinit-server.zsh";
   oh-my-zsh = {

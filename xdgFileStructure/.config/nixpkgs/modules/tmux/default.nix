@@ -1,10 +1,9 @@
 { pkgs }:
 
-with import ../variablesCommon.nix;
-  let
-    inherit
-      df
-    ;
+let
+  inherit (import ../variablesCommon.nix)
+    df
+  ;
 in {
   enable = true;
   tmuxp.enable = true;

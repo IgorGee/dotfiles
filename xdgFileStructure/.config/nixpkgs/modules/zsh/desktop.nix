@@ -1,11 +1,10 @@
 { config, lib }:
 
-with import ../variablesCommon.nix;
-  let
-    inherit
-      relativeXDGConfigDirPath
-      df
-    ;
+let
+  inherit (import ../variablesCommon.nix)
+    relativeXDGConfigDirPath
+    df
+  ;
 in {
   # To get aliases to work in vim shell execution, we need to put them in zshenv
   envExtra =

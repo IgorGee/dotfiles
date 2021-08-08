@@ -1,6 +1,5 @@
-with import ./variablesCommon.nix;
 let
-  inherit
+  inherit (import ./variablesCommon.nix)
     homeDirectory
   ;
 in rec {

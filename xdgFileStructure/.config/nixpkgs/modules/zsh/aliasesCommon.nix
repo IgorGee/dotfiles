@@ -1,8 +1,7 @@
-with (import ../variablesCommon.nix);
 let
   editor = "vim";
 
-  inherit
+  inherit (import ../variablesCommon.nix)
     absoluteXDGCacheDirPath
     absoluteXDGConfigDirPath
     absoluteXDGDataDirPath
@@ -10,6 +9,7 @@ let
     dotfilesDirPath
     homeDirectory
     homeManagerModulesDirPath
+    nixpkgsDirPath
     xdgConfigDirPath
   ;
 in {
@@ -76,6 +76,10 @@ in {
   nvm = "nv --minor";
   nvp = "nv --patch";
   nreset = "rm -rf node_modules yarn.lock && ni";
+
+  # Kubernetes
+  k = "kubectl";
+  ka = "k apply -f";
 
   # C
   mi = "sudo make install";

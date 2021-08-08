@@ -1,11 +1,10 @@
 { config, lib }:
 
-with import ../variablesCommon.nix;
-  let
-    inherit
-      relativeXDGConfigDirPath
-      df
-    ;
+let
+  inherit (import ../variablesCommon.nix)
+    relativeXDGConfigDirPath
+    df
+  ;
 in {
   enable = true;
   enableAutosuggestions = true;
