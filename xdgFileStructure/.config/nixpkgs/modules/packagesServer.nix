@@ -3,5 +3,6 @@
 with pkgs;
 [
   # Kubernetes
-  fluxcd
+  kubernetes-helm
+  kubeseal
 ]
