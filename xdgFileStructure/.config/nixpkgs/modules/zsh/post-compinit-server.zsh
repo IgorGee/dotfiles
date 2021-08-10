@@ -10,3 +10,8 @@ function k8s-remove-stuck-ns() {
   | kubectl replace --raw /api/v1/namespaces/"$namespace"/finalize -f -
 
 }
+
+function k8s-seal-secret() {
+  local secretFilename=$1
+  cat "$secretFilename" | kubeseal --controller-name sealed-secrets --format yaml > sealed-"$secretFilename"
+}
