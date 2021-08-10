@@ -34,12 +34,14 @@ in {
   eps = "${editor} ${homeManagerModulesDirPath}/packagesServer.nix";
   eh = "${editor} ${nixpkgsDirPath}/home.nix";
   eac = "${editor} ${df.zsh}/aliasesCommon.nix";
-  ead = "${editor} ${df.zsh}/aliasesCommon.nix";
+  ead = "${editor} ${df.zsh}/aliasesDesktop.nix";
+  eas = "${editor} ${df.zsh}/aliasesServer.nix";
   ev = "${editor} ${df.vim}/vanilla.vim";
   evb = "${editor} ${df.vim}/bindings.vim";
   et = "${editor} ${df.tmux}/default.nix";
   ezc = "${editor} ${df.zsh}/post-compinit-common.zsh";
   ezd = "${editor} ${df.zsh}/post-compinit-desktop.zsh";
+  ezs = "${editor} ${df.zsh}/post-compinit-server.zsh";
   efm = "${editor} ${xdgConfigDirPath}/ranger/rc.conf";
 
   # Common Directories
