@@ -61,16 +61,16 @@ in {
   nda = "yarn add";
   ndad = "yarn add --dev";
   # https://github.com/yarnpkg/yarn/issues/5056
-  ndag = "npm_config_registry=http://localhost:4873 yarn global add";
+  ndag = "npm_config_registry=http://npm.geenethlab/ yarn global add";
   ndr = "yarn remove";
-  ndrg = "yarn global remove";
+  ndrg = "npm_config_registry=http://npm.geenethlab/ yarn global remove";
   ndu = "yarn upgrade-interactive --latest";
   nrs = "yarn start";
   nrd = "yarn dev";
   nrt = "yarn test";
   nrl = "yarn lint";
   nre = "yarn runExecutable";
-  np = "yarn publish";
+  np = "npm publish --registry http://npm.geenethlab/";
   nb = "yarn build";
   nw = "yarn watch";
   nv = "yarn version --no-git-tag-version";

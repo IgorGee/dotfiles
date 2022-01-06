@@ -13,7 +13,12 @@ with pkgs;
   ranger
   navi
   cht-sh
+  rsync
 
   # Misc
   nodejs-16_x # nodejs
+
+  # Networking
+  dig
+  traceroute
 ]

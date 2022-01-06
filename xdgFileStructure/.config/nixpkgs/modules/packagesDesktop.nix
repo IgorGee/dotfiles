@@ -75,8 +75,6 @@ in [
   brave
 
   # UI
-  # picom # For transparency for st. Currently breaks when opening Brave.
-  xcompmgr # Older alternative for transparency for st
   bspwm # Window Manager. There is a service for this, but it doesn't seem to work or allow for
   wmname # Tool that helps fix broken applications (Datagrip showing up with gray screen only)
   # restarting of  settings. Thinking about it more, I should let home-manager do what it does
@@ -114,7 +112,7 @@ in [
   aspellDicts.en-computers
 
   dbmate # Database migration handler
-  postgresql_13 # So that I can use pg_dump
+  postgresql_14 # So that I can use pg_dump
   jetbrains.datagrip # Database GUI
   postgresql_jdbc # Needed by database GUIs
 
@@ -123,4 +121,11 @@ in [
 
   xorg.xf86inputsynaptics # Needed for multi-touch and tap on trackpad for laptop
   jre8
+
+  ansible # Ansible
+  sshpass # Give password to ssh when using ansible
+
+  etcher
+
+  brightnessctl
 ]
