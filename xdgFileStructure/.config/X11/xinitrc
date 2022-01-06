@@ -1,8 +1,10 @@
+#!/bin/bash
+
 VBoxClient-all &
 
 $HOME/dotfiles/scripts/xrandr-xps.sh
 
-/* Replace the default X cursor */
+# Replace the default X cursor
 xsetroot -cursor_name left_ptr
 
 sxhkdDir="$HOME/.config/sxhkd"
@@ -18,5 +20,7 @@ feh --bg-fill $HOME/dotfiles/misc/backgrounds/* --no-fehbg &
 
 $HOME/.config/polybar/launch.sh
 
-xcompmgr -c &
+# For whatever reason, picom must be installed from pacman, not nix
+picom -b --backend glx &
 bspwm
+# xmonad
