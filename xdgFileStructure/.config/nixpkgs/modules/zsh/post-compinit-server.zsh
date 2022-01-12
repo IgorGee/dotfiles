@@ -15,3 +15,7 @@ function k8s-seal-secret() {
   local secretFilename=$1
   cat "$secretFilename" | kubeseal --controller-name sealed-secrets --format yaml > sealed-"$secretFilename"
 }
+
+function k8s-get-all() {
+
+}

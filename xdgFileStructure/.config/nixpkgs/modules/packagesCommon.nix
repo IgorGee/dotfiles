@@ -14,6 +14,7 @@ with pkgs;
   navi
   cht-sh
   rsync
+  k9s
 
   # Misc
   nodejs-16_x # nodejs
