@@ -68,6 +68,10 @@ in {
   dose = "docker-compose";
   doseu = "docker-compose up -d";
   dosed = "docker-compose down";
+
+  # Kubernetes
+  lk = "minikube"; # Local Kubernetes
+
   # XDG Fixes
   irssi = "irssi --config=${absoluteXDGConfigDirPath}/irssi/config --home=${absoluteXDGDataDirPath}/irssi";
 

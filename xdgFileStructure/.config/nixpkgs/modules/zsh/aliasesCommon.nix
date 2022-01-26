@@ -55,8 +55,6 @@ in {
   tm = "tmux";
 
   # Node
-  ni = "yarn";
-  nr = "yarn run";
   ninit = "yarn init -y";
   nda = "yarn add";
   ndad = "yarn add --dev";
@@ -65,19 +63,11 @@ in {
   ndr = "yarn remove";
   ndrg = "npm_config_registry=http://npm.geenethlab/ yarn global remove";
   ndu = "yarn upgrade-interactive --latest";
-  nrs = "yarn start";
-  nrd = "yarn dev";
-  nrt = "yarn test";
-  nrl = "yarn lint";
   nre = "yarn runExecutable";
   np = "npm publish --registry http://npm.geenethlab/";
-  nb = "yarn build";
-  nw = "yarn watch";
-  nv = "yarn version --no-git-tag-version";
-  nvM = "nv --major";
-  nvm = "nv --minor";
-  nvp = "nv --patch";
-  nreset = "rm -rf node_modules yarn.lock && ni";
+
+  # Conventioned Projects with 'run' script
+  pr = "sh run";
 
   # Kubernetes
   k = "kubectl";
