@@ -16,6 +16,13 @@ function k8s-seal-secret() {
   cat "$secretFilename" | kubeseal --controller-name sealed-secrets --format yaml > sealed-"$secretFilename"
 }
 
+function k8s-reencrypt-sealed-secret() {
+  local sealedSecretFilename=$1
+  # See https://github.com/bitnami-labs/sealed-secrets/issues/626
+  kubeseal --controller-name sealed-secrets --re-encrypt <  "$sealedSecretFilename" --format yaml > tmp.yaml \
+    && mv tmp.yaml "$sealedSecretFilename"
+}
+
 function k8s-get-all() {
 
 }
