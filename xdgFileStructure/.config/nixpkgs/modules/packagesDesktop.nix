@@ -92,6 +92,12 @@ in [
   shellcheck # shell linter
   docker # docker
   docker-compose # docker-compose
+  minikube
+  k9s
+  skaffold
+  kubectl # For minikube
+  helmfile
+  gparted
   python3 # python3
   jq # required for mullvad wireguard script
   wireguard-tools # wireguard

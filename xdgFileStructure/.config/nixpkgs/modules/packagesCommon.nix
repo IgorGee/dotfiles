@@ -22,4 +22,7 @@ with pkgs;
   # Networking
   dig
   traceroute
+
+  # Kubernetes
+  kubernetes-helm
 ]
