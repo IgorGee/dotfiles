@@ -7,6 +7,7 @@ let
   ;
 in {
   enable = true;
+  enableCompletion = false; # https://github.com/NixOS/nix/issues/5445
   enableAutosuggestions = true;
   dotDir = "${relativeXDGConfigDirPath}/zsh";
   history = {
