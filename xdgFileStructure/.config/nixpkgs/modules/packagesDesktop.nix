@@ -86,6 +86,7 @@ in [
   arandr # GUI for xrandr to help out with multi-monitor setup
   xfce.thunar # GUI File Manager
   mtpfs # Automatically connect android devices and become viewable by GUI File Managers
+  veracrypt
 
   # Misc
   yarn # npm alternative

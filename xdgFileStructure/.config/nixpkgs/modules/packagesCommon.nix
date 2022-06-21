@@ -25,4 +25,5 @@ with pkgs;
 
   # Kubernetes
   kubernetes-helm
+  argocd
 ]
