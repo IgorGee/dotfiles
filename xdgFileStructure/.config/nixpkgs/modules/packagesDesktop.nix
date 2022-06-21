@@ -60,7 +60,7 @@ in [
   extract
   clustergit
   lazydocker
-  dragon-drop
+  xdragon
   ueberzug
   sxiv
 
