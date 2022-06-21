@@ -19,3 +19,4 @@
 [submodule "xdgFileStructure/.config/emacs"]
 	path = xdgFileStructure/.config/emacs
 	url = https://github.com/hlissner/doom-emacs.git
+	branch = master
