@@ -69,14 +69,15 @@
 ;; PConfig
 (load! "~/repos/personal/pdotfiles/pconfig.el")
 
+;; Figure out what's going on with org-roam and server later
 ;; org-roam-server
-(setq org-roam-server-port 7048)
-(require 'org-roam-protocol)
-;; This is currently necessary because of this bug: https://github.com/org-roam/org-roam-server/issues/115
-(after! org-roam
-  (smartparens-global-mode -1)
-  (org-roam-server-mode)
-  (smartparens-global-mode 1))
+;; (setq org-roam-server-port 7048)
+;; (require 'org-roam-protocol)
+;; ;; This is currently necessary because of this bug: https://github.com/org-roam/org-roam-server/issues/115
+;; (after! org-roam
+;;   (smartparens-global-mode -1)
+;;   (org-roam-server-mode)
+;;   (smartparens-global-mode 1))
 
 (use-package! company
   :config
