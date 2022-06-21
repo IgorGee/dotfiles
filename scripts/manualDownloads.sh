@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-XDGDataDir="$HOME/dotfiles/xdgFileStructure/.local/share/""
+XDGDataDir="$HOME/dotfiles/xdgFileStructure/.local/share/"
 themesDir="$XDGDataDir/themes"
 iconDir="$XDGDataDir/icons"
 
