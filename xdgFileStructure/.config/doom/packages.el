@@ -50,5 +50,8 @@
 ;(unpin! t)
 
 (package! key-chord)
-(package! org-roam-server)
 (package! company-fuzzy)
+
+;; https://github.com/org-roam/org-roam-ui#doom
+(unpin! org-roam)
+(package! org-roam-ui)

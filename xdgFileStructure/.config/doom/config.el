@@ -69,15 +69,20 @@
 ;; PConfig
 (load! "~/repos/personal/pdotfiles/pconfig.el")
 
-;; Figure out what's going on with org-roam and server later
-;; org-roam-server
-;; (setq org-roam-server-port 7048)
-;; (require 'org-roam-protocol)
-;; ;; This is currently necessary because of this bug: https://github.com/org-roam/org-roam-server/issues/115
-;; (after! org-roam
-;;   (smartparens-global-mode -1)
-;;   (org-roam-server-mode)
-;;   (smartparens-global-mode 1))
+;; https://github.com/org-roam/org-roam-ui#doom
+(use-package! websocket
+    :after org-roam)
+(use-package! org-roam-ui
+    :after org-roam ;; or :after org
+;;         normally we'd recommend hooking orui after org-roam, but since org-roam does not have
+;;         a hookable mode anymore, you're advised to pick something yourself
+;;         if you don't care about startup time, use
+;;  :hook (after-init . org-roam-ui-mode)
+    :config
+    (setq org-roam-ui-sync-theme t
+          org-roam-ui-follow t
+          org-roam-ui-update-on-save t
+          org-roam-ui-open-on-start t))
 
 (use-package! company
   :config
