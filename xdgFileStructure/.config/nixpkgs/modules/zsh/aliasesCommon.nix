@@ -24,7 +24,7 @@ in {
   hms = "hm switch; szsh";
 
   # Nix
-  ngc = "nix-collect-garbage -d";
+  ngc = "sudo nix-collect-garbage -d";
   ncu = "nix-channel --update";
 
   # Editing common configs
@@ -65,6 +65,10 @@ in {
   ndu = "yarn upgrade-interactive --latest";
   nre = "yarn runExecutable";
   np = "npm publish --registry http://npm.geenethlab/";
+
+  # Systemd
+  s = "sudo systemctl";
+  suser = "systemctl --user";
 
   # Conventioned Projects with 'run' script
   pr = "sh run";

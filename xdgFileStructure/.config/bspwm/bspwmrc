@@ -2,12 +2,16 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-if [ "$(xrandr --query | grep " connected" | cut -d" " -f1 | wc -l)" -eq 1 ]; then
-    bspc monitor -d I II III IV V VI VII VIII IX X
+mainMonitor=eDP-1
+
+noExternals=$(xrandr --listmonitors | cut -d' ' -f2 | head -n 1)
+if [ "$noExternals" -eq 1 ]; then
+    bspc monitor $mainMonitor -d 1 2 3 4 5 6 7 8 9 10
 else
-    bspc monitor DP-3 -d I II III
-    bspc monitor DP-1 -d IV V VI VII
-    bspc monitor DP-2 -d VIII IX X
+    bspc wm --reorder-monitors DP-1 HDMI-1 eDP-1
+    bspc monitor DP-1   -d 1 2 3
+    bspc monitor HDMI-1 -d 4 5 6 7
+    bspc monitor $mainMonitor  -d 8 9 10
 fi
 
 bspc config border_width         0
@@ -22,3 +26,5 @@ wmname LG3D
 
 bspc rule -a Emacs state=tiled
 bspc rule -a Peek state=floating
+bspc rule -a mpv state=floating
+bspc rule -a pentablet state=floating hidden=on

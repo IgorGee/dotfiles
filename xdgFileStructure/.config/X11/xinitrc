@@ -1,26 +1,40 @@
 #!/bin/bash
 
-VBoxClient-all &
-
-$HOME/dotfiles/scripts/xrandr-xps.sh
-
 # Replace the default X cursor
 xsetroot -cursor_name left_ptr
 
+# Keyboard shortcuts
 sxhkdDir="$HOME/.config/sxhkd"
 sxhkdFiles="$sxhkdDir/sxhkdrc $sxhkdDir/bspwm.sxhkd"
 sxhkdCommand="sxhkd -c $sxhkdFiles"
 pgrep -x $sxhkdCommand > /dev/null || $sxhkdCommand &
 
+# Notifications
 dunst &
 
+# Espanso
 espanso daemon &
 
+# Automatically mount usb devices
+udiskie &
+
+# Background
 feh --bg-fill $HOME/dotfiles/misc/backgrounds/* --no-fehbg &
 
-$HOME/.config/polybar/launch.sh
+# Polybar
+$HOME/.config/polybar/launch.sh > /dev/null 2>&1
 
 # For whatever reason, picom must be installed from pacman, not nix
 picom -b --backend glx &
-bspwm
-# xmonad
+
+# flameshot needs to run in the background in order for "copy" to work
+flameshot &
+
+# Laptop fan settings
+asusctl profile -P performance
+
+# Automatically run drawing tablet software
+nohup sudo xp-pen-deco-01-v2-driver &
+
+# Run twm
+exec bspwm

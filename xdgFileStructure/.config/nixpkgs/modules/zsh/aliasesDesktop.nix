@@ -1,5 +1,5 @@
 let
-  editor = "emacsclient -n";
+  editor = "code -a /home/igor/dotfiles";
 
   inherit (import ../variablesDesktop.nix)
     absoluteXDGCacheDirPath
@@ -14,15 +14,6 @@ in {
   # pAliases
   inherit (import pAliasesFilePath)
     sshN
-    mMain
-    umMain
-    cdMain
-    mHolding
-    umHolding
-    cdHolding
-    mRaw
-    umRaw
-    cdRaw
     gadn
   ;
 

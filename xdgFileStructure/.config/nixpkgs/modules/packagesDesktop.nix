@@ -77,62 +77,74 @@ in [
   # UI
   bspwm # Window Manager. There is a service for this, but it doesn't seem to work or allow for
   wmname # Tool that helps fix broken applications (Datagrip showing up with gray screen only)
-  # restarting of  settings. Thinking about it more, I should let home-manager do what it does
-  # best, which is manage packages. For settings, it's probably better for me to manually place
-  # those via stow. This lets me use proper DSL for the tool as well.
   sxhkd # Simple X Hotkey Daemon
   polybar # Status bar
   xdg_utils # Automatically open files appropriately in browser, mpv, etc.
   arandr # GUI for xrandr to help out with multi-monitor setup
   xfce.thunar # GUI File Manager
-  mtpfs # Automatically connect android devices and become viewable by GUI File Managers
-  veracrypt
+  lxappearance # Update and handle themes
+  autorandr # Multiscreen handling
+  dmenu # Launcher
+  xclip # cli clipboard
+  copyq # Clipboard manager
+  glibcLocales # Necessary to fix locale issues (related to rendering emoji in zsh)
+  peek # gif Recording
+  espanso # global snippets
+  libnotify # notifications
+  dunst # notifications
+
+  # RE Android
+  apktool
+  jd-gui
+
+  # Backups and en
+  rclone # Local
+  borgbackup # Remote
 
   # Misc
   yarn # npm alternative
   shellcheck # shell linter
+  gparted # partition manager
+  python3 # python3
+  cmake # make
+  yt-dlp # yt-dl
+  ffmpeg # video and audio tool
+  usbutils # lsusb
+  zip # zip
+
+  # Docker and K8s
   docker # docker
   docker-compose # docker-compose
-  minikube
-  k9s
-  skaffold
+  minikube # local k8s cluster
   kubectl # For minikube
+  skaffold
   helmfile
-  gparted
-  python3 # python3
-  jq # required for mullvad wireguard script
-  wireguard-tools # wireguard
-  glibcLocales # Necessary to fix locale issues (related to rendering emoji in zsh)
-  caffeine-ng
-  cmake
-  flameshot
-  peek
-  xdotool # KB/Mouse Automation
-  espanso
-  libnotify
-  xclip
-  dunst
 
   # Spelling/Dictionary/Thesaurus
   aspell
   aspellDicts.en
   aspellDicts.en-computers
 
+  # Database
   dbmate # Database migration handler
   postgresql_14 # So that I can use pg_dump
   jetbrains.datagrip # Database GUI
+  jre8 # Requirement for datagrip
   postgresql_jdbc # Needed by database GUIs
-
-  haskellPackages.network-manager-tui # TUI for network manager
-  openvpn # oVPN connections
-
-  xorg.xf86inputsynaptics # Needed for multi-touch and tap on trackpad for laptop
-  jre8
 
   ansible # Ansible
   sshpass # Give password to ssh when using ansible
 
-  etcher
+  # Laptop tools
+  brightnessctl # adjust screen brightness
+  xorg.xf86inputsynaptics # Needed for multi-touch and tap on trackpad for laptop
 
-  brightnessctl
+  # Audio
+  pipewire
+  pavucontrol
+  audacity
+
+  # Productivity
+  obsidian
+  libsForQt5.xp-pen-deco-01-v2-driver # Necessary ui application to run for drawing tablet (deco 3)
 ]

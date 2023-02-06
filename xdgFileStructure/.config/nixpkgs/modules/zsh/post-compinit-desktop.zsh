@@ -2,6 +2,7 @@ zshDirPath=$HOME/dotfiles/xdgFileStructure/.config/nixpkgs/modules/zsh
 source $zshDirPath/post-compinit-common.zsh
 
 export PATH="$PATH:/home/igor/.local/share/npm/bin"
+export XCURSOR_PATH="$XCURSOR_PATH:/home/igor/.local/share/icons"
 
 # gcpr author repo-name
 # gcpr author repo-name FETCH_HEAD~3..FETCH_HEAD

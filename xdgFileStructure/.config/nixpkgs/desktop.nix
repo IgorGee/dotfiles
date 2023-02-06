@@ -33,16 +33,19 @@
   # For some reason, I can't call pkgs.callPackage instead of import.
   programs = {
     feh.enable = true;
-    mpv.enable = true;
+    mpv = {
+      enable = true;
+      config = {
+        speed = 2;
+        autofit-larger = "960x540";
+        geometry = "100%:100%";
+      };
+    };
     newsboat.enable = true;
     neomutt.enable = true;
     zathura.enable = true;
     emacs.enable = true;
     # Seems like the imports = [...] syntax in home.nix automerges program configs, INCLUDING handling recursion and array concats
     zsh = import ./modules/zsh/desktop.nix { inherit config lib; };
-    rofi = {
-      enable = true;
-      theme = "Arc-Dark";
-    };
   };
 }

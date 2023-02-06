@@ -109,3 +109,23 @@
 
 (setq treemacs-git-mode 'deferred)
 (setq doom-themes-treemacs-theme "doom-colors")
+
+;; Lets you select the search you're typing in case you're hovering over a fuzzy match that you don't want to select
+(setq ivy-use-selectable-prompt t)
+
+;; There are some surrounding symbols that are not included in vim, so we can manually add them here
+;; e.g. org code blocks (=), and verbatim (~) tags are not included
+(defmacro define-and-bind-text-object (key start-regex end-regex inner-name-symbol outer-name-symbol)
+  (let ((inner-name (make-symbol inner-name-symbol))
+        (outer-name (make-symbol inner-name-symbol)))
+    `(progn
+       (evil-define-text-object ,inner-name (count &optional beg end type)
+         (evil-select-paren ,start-regex ,end-regex beg end type count nil))
+       (evil-define-text-object ,outer-name (count &optional beg end type)
+         (evil-select-paren ,start-regex ,end-regex beg end type count t))
+       (define-key evil-inner-text-objects-map ,key (quote ,inner-name))
+       (define-key evil-outer-text-objects-map ,key (quote ,outer-name)))))
+(define-and-bind-text-object "=" "=" "=" "ig-evil-inner-equal" "ig-evil-outer-equal")
+(define-and-bind-text-object "~" "~" "~" "ig-evil-inner-tilde" "ig-evil-outer-tilde")
+
+(add-hook 'window-setup-hook #'treemacs 'append)

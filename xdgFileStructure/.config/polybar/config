@@ -29,7 +29,7 @@ background-alt = #c55
 monitor = ${env:MONITOR}
 width = 100%
 height = 32
-modules-right = caffeine cpu eth pulseaudio date
+modules-right = caffeine temperature cpu eth pulseaudio date battery
 modules-left = bspwm
 ; This allows true fullscreen experience without bar covering the fullscreen window
 wm-restack = bspwm
@@ -117,6 +117,35 @@ format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #0a6cf5
 
 label = %date% | %time%
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC0
+full-at = 98
+
+format-charging = 🔌 <label-charging>
+format-discharging = 🪫 <label-discharging>
+format-full-prefix = "🔋 "
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 60
+
+format = <ramp> <label>
+format-underline = #f50a4d
+format-warn = <ramp> <label-warn>
+format-warn-underline = ${self.format-underline}
+
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = ${colors.secondary}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-foreground = ${colors.foreground-alt}
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -373,57 +402,6 @@ menu-0-2-exec = caffeine kill
 ;bar-volume-empty-font = 2
 ;bar-volume-empty-foreground = ${colors.foreground-alt}
 
-;[module/battery]
-;type = internal/battery
-;battery = BAT0
-;adapter = ADP1
-;full-at = 98
-
-;format-charging = <animation-charging> <label-charging>
-;format-charging-underline = #ffb52a
-
-;format-discharging = <animation-discharging> <label-discharging>
-;format-discharging-underline = ${self.format-charging-underline}
-
-;format-full-prefix = " "
-;format-full-prefix-foreground = ${colors.foreground-alt}
-;format-full-underline = ${self.format-charging-underline}
-
-;ramp-capacity-0 = 
-;ramp-capacity-1 = 
-;ramp-capacity-2 = 
-;ramp-capacity-foreground = ${colors.foreground-alt}
-
-;animation-charging-0 = 
-;animation-charging-1 = 
-;animation-charging-2 = 
-;animation-charging-foreground = ${colors.foreground-alt}
-;animation-charging-framerate = 750
-
-;animation-discharging-0 = 
-;animation-discharging-1 = 
-;animation-discharging-2 = 
-;animation-discharging-foreground = ${colors.foreground-alt}
-;animation-discharging-framerate = 750
-
-;[module/temperature]
-;type = internal/temperature
-;thermal-zone = 0
-;warn-temperature = 60
-
-;format = <ramp> <label>
-;format-underline = #f50a4d
-;format-warn = <ramp> <label-warn>
-;format-warn-underline = ${self.format-underline}
-
-;label = %temperature-c%
-;label-warn = %temperature-c%
-;label-warn-foreground = ${colors.secondary}
-
-;ramp-0 = 
-;ramp-1 = 
-;ramp-2 = 
-;ramp-foreground = ${colors.foreground-alt}
 
 ;[module/powermenu]
 ;type = custom/menu

@@ -12,11 +12,11 @@ super + Return
 
 # program launcher
 super + @space
-  rofi -show run
+  dmenu_run
 
 #
 # Screenshot
 #
 
 Print
-  sudo flameshot gui
+  flameshot gui

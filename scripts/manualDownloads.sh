@@ -4,7 +4,7 @@ XDGDataDir="$HOME/dotfiles/xdgFileStructure/.local/share/"
 themesDir="$XDGDataDir/themes"
 iconDir="$XDGDataDir/icons"
 
-curl -LO https://github.com/EliverLara/Sweet/releases/download/v1.10.5/Sweet-Dark.zip
+curl -LO https://github.com/EliverLara/Sweet/releases/download/v3.0/Sweet-Dark.zip
 unzip Sweet-Dark.zip -d "$themesDir"
 rm Sweet-Dark.zip
 
